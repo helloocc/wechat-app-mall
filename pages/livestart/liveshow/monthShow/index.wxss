@@ -1,0 +1,181 @@
+
+.notice-content {
+  display: flex;
+  align-items: center;
+}
+
+.join-group-button-img-notice {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -4rpx;
+}
+
+.sticky-header{
+  padding: 0 24rpx;
+  width: 702rpx !important;
+}
+
+.sticky-header-fixed{
+  box-shadow: rgba(98, 178, 143, 0.2) 0px 1px 4px;
+}
+
+/* ad-section 滚动广告位 */
+.ad-section {
+  margin: 0rpx 24rpx 24rpx 24rpx;
+  border-radius: 28rpx;
+}
+
+.ad-section .swiper {
+  border-radius: 28rpx;
+  height: 360rpx;
+}
+
+.ad-section .swiper-item {
+  width: 700rpx;
+  height: 360rpx;
+  border-radius: 28rpx;
+  background-size: cover;
+}
+
+/* END ad-section 滚动广告位 */
+
+/* START movable-area 加群按钮 */
+.join-group {
+  pointer-events: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+.join-group-button {
+  pointer-events: auto;
+  left: 80%;
+  top: 80%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.join-group-button-img {
+  width: 108rpx;
+  height: 108rpx;
+}
+/* END movable-area 加群按钮 */
+
+
+/* START 搜索框 */
+.search-container-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 60rpx; /* 应该和 antd-mini/NoticeBar/index.wxss 第4行一样，通知栏的高度 */
+  /* The `top` style will be dynamically set in the HTML `style` attribute.  */
+  /* top: 0; */
+  height: 100rpx;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.search-container {
+  margin: 0 24rpx 0rpx 24rpx;
+  padding-right: 24rpx;
+  width: 676rpx;
+  display: flex;
+  border: 1px solid rgb(78, 163, 122);
+  border-radius: 53rpx;
+  height: 60rpx;
+  justify-content: space-between;
+}
+
+.searchbar-container{
+  padding-left: 0rpx !important;
+  height: 60rpx !important;
+}
+
+.searchbar-input {
+  width: 400rpx !important;
+  height: 60rpx !important;
+}
+
+.city-container {
+  display: flex;
+  align-items: center;
+}
+
+.city-name {
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+
+.city-line {
+  font-size: 26rpx;
+  color: #ccc;
+  margin-right: 16rpx;
+}
+
+.city-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+/* END 搜索框 */
+
+
+/* month-header START */
+/* 月份电梯样式 */
+.month-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  width: 100%;
+  position: sticky;
+  /* 理论上精确计算应该是 160rpx，但小程序自动将 rpx 转换成 px 时候会有精度损失（比如 10rpx=5.3px，按照5px算）；*/
+  /* 160rpx 会在个别机型上出现 2px 的空白，156rpx 让该元素和上面的搜索出现了 4rpx 的交叉，避免精度损失带来的空白 */
+  top: 156rpx; 
+  z-index: 100;
+  padding: 0 12rpx;
+}
+
+.month-header .month-header-list {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.month-header-item {
+  padding: 6px 16px 6px 0 !important;
+  margin: 0 8px;
+  font-size: 32rpx !important;
+  white-space: nowrap;
+  color: #bbb !important;
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.ant-tabs-bar-basic.ant-tabs-bar-active:after {
+  background: none !important;
+}
+
+.ant-tabs-bar-scroll-view {
+  height: 46px !important;
+  justify-content: flex-start !important;
+}
+
+.month-header .active {
+  background-image: url("data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAABcCAMAAAD01Oj7AAAABGdBTUEAALGPC/xhBQAAAmRQTFRF/MoW/csX/MsX/MsZ/coW/8wd/8wa/9Uc/cwW/MsX/MsX/csX/MoX/8sY/csX/csX/coX/coW/8sX/MoX/MsX/84X/84Y/MsW/csX/MwX/8sX/8wi/csW/cwX/8wa/coW/coX/8oa/80Z/cwW/coX/MoW/88c/csX/csX/csY//9A/MsX/coX/csW/8wY/MsX/coX/csW/coY/csW/MoX/coY/csW/csY/MsW/9Ac/csX/80W/8sW/csX/MsX/84Z/9AY/MsY/MoW/coX/csW/M0Y/csX/MsW/MsX/coW/80Z/coX/csX/8oX/cwX/csX/80X/8wa/8sa/84Y/MoX/csW/MsW/coW/cwX/9EX/8sX/9Ur/csX/csX/88b/88Y/MwX/coX/MsX/98g/8sZ/8oZ/8sY/MsW/80Z/MoX/coW/csX/80X/cwY/cwX/9Eb/csX/csX/MsX/csX/coX/80W/MsX/9MW/coX/csY/csW/9Ie/csX/csX/8wf/coW/MoW/csW/csX/M0X/csW/cwW/MsW/csW/coX/coW/coX/coX/cwW/84b/8wW/MoX/csW/80X/8wa/cwY/8wX/csX/cwX/9EX/MsX/csX/csX/8wz/csW/csX/9Ug/csX/cwW/coW/coX/MsX/80Z/csX//+A/csX/80Z/8sY/8wa/8sa/88g/MsW/csX//9V/cwY/9gn/coW/coW/csW/csX/9sk/8sa/coX/84d/9Ur/8sY/coX/MsX/csW/8wa/80c/csW/csX/8oY/coW/coX/coW/csW/////csWAAAA/MoWsGUeuQAAAMt0Uk5TwZi/XX4jMhKLWcn4s0mcqOnnRK6xQyqrnWQiD/NuPNnfHSmV1Lcleo51BK/s5Uu7ms5qiceCopfEG49RRZJjHyteXKncVta2YtpI6JlNeGZMFDsVV9vD8nwWLAb11zAgWve6CFNSNsVHveOmQmmQHNHqtZOlLsAX7Wz6EXvSGc+4lOtlf3O5zZH7pHloL1DGoThGdy3ghguy7uEF5swYnnLx3rQzpwL0PVQeMRCt0wOBDaCW7+IOJ4caDEpvvtgKJPD5NZ/2/P0B/gDhhL85AAAEU0lEQVR42u3cZVfcQBQG4K27u7u7u7srLS1F6oq2aKGlgjsULV6jUChQ3GFZ2J35U2V3ZyXZBC7kW+6853DOZkI+3OdMdpOZSTSkL03xrbX3z81M/Et4pKPp+/vdSc0pfsRBZJk+U1ta73ISaabH1D49r99yFAmmzGwqzMb4n5zFgekTdcj7Eu4iZnpAJfLDm8sImZZKMdF7zg+5jT1TD5VO8QGOY8dEZbNlNucBMNGY6D8caGAmSj9e4RcHACZKt13nRgAmSt/s40oAJvorjo8cAJgoDXjHmSBZUsWZIDnBmUD5wpkg+YfA4sjaB+WJypii1K9UVmMsdL8iphr1M/mYKy1RwpSteqUEVukHJUx5qmeaxyotUMJ0SPVM0azSFUqYlqueqZVV2qCAabf6v8E/Kj/pVmaqXumddV5pyEzh19TfmVKt1XYMjamzRY/gEjzCWm/sUJh6J99BcddWba3Y8HjwTEnfkdzcRtlNUjYPkmnTcT0Spb/37c8grxuDYOpqaEIzUlIvLF3nF+wOZMrqQDSg9Nux/opQWy+RnRxvO08wZZeUgW+Li4UpXRKpKOIrKiWyQbqzPM1nTM8ldhoKAgmynGSlTxBRvDD/0ms8HZV2arEhkUyDZcx/vAgjyPQNrakqErXnHtOjUyJPWPHpxCXtttDD1bjeRENuCi8CdqCckjvMyp/Y9/mOc45w6aCJiWTYNX1bTVDGi9WfYdrS+7eEd9lQUszL5z0s3cy1mSCN5YdsnLUlf6vths3MROqCA17o2sqb9ViViC8TsX96YJ3VabSZCX3ymUeI4GqxkFrHfTmTMQeZR5iw+QxrduJMgn7zRticYulOdZzJmG7GkSZqr2XtCZzJmDzGIf6l/8baEzlTX37qGMcymV52kzMR25hcp3jHHLYjFR1T46xPGdUfKhedarS1Wcbkbon/uZzt0OJiamxJMtgGHl8fZc2Vcmvd/rEb3TGYmEp/9IpGQyJfmXbMYJue4iPKDGzmDg9Te6VOYgQy2fjMrhPbWOxw0FnjGPitJjxM7qelh3GnvSLtlk62wPEw78I1k/QEDdOTqbLTbI+07FOO/OFImJ7p5CfaelZZBtuwM3XUQBbeNCBnag8DreLyQM5UrfhJCgxMbgaQUshX3ExZsM5UQVAzaYGLlV/iZuoGMl3GzZQLZNqMmikBqERLUTOlAZU6CWqml0CmvbiZIoFMe3Az5QGZtuNmSgcyleBmKgYy/cHN1ApTqiW4mYAX4X7ImT7DmOKQM6XCmMqQM60Pgihd0CNnInMhTMkEO9MzCJMWPRN5OrBSFuFMKQMqGdw4EyFTBmLqJpyJkMCc/pV82jmTMf4L+32b0HzCmUy52tvPCyunE87EcqlITikX8goBNOub6ttkJjFLCWeyS93FGIkTLhT2+nhMay9HxYq+oXqSG4GH4lrJWx+nsXap3uHxN8AHolsXXnf1yuWxw0aOuD6oly39BwoF9rtMWftvAAAAAElFTkSuQmCC");
+  background-size: 90%;
+  background-position: 0px 6px;
+  background-repeat: no-repeat;
+  color: #333 !important;
+}
+
+/* month-header END */

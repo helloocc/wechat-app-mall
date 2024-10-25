@@ -1,0 +1,4 @@
+<view class="icon-wrap flex-start">
+  <image class="icon icon-{{size}}" src="{{image}}">
+  </image>
+</view>

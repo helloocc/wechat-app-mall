@@ -1,0 +1,3 @@
+<view>
+  <ticket-form edit="{{false}}" liveshowId="{{liveshowId}}"></ticket-form>
+</view>

@@ -1,0 +1,75 @@
+
+.container {
+  width: 100%;
+  padding: 20rpx 24rpx 0 24rpx;
+  font-family: PingFangSC-Regular;
+}
+
+.show-data {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 1);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.searchbar-input {
+  border: 1px solid rgb(78, 163, 122);
+  margin: 0 auto;
+  border-radius: 53rpx;
+}
+
+.search-container>l-search-bar {
+  width: 100%;
+  padding: 0;
+}
+
+.result-container .no-result {
+  text-align: center;
+  color: #aaa;
+}
+
+.searchbar {
+  padding: 0 !important;
+}
+
+
+#history-title {
+  color: #aaa;
+  font-size: 24rpx;
+  margin-top: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  font-size: 24rpx;
+  line-height: 78rpx;
+  color: #aaa;
+}
+
+.history-item .l-icon {
+  font-size: 22rpx !important;
+  color: #aaa !important;
+  padding-right: 16rpx;
+  align-items: center !important;
+}
+
+.history-item .content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  line-height: 28rpx;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #878787;
+}

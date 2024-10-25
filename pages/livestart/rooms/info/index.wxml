@@ -1,0 +1,67 @@
+<noticebar>
+  <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../icons/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
+</noticebar>
+<view class="search-container-wrapper">
+  <view class="search-container">
+    <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bind:tap="handleGotoSearch" icon-color="#fff" bg-color="transparent" shape="circle" placeholder="搜索微信群名" placeholder-style="color: rgba(255, 255, 255, 0.7)" show-cancel="{{false}}" />
+    <select-city type="white" bind:select="handleSelectCity" save></select-city>
+  </view><!-- 搜索区域 -->
+</view>
+<view class="tab-container">
+  <tabs current="{{tabValue}}" items="{{tabRooms}}" bind:change="handleChangeTabs"
+   tabActiveClassName="tab-active"
+   tabClassName="tab-item"
+   tabsBarClassName="tabs-bar"
+   >
+   </tabs>
+</view>
+<view class="list-box">
+  <block wx:if="{{searchKey && rooms.length==0}}">
+    <van-empty image="search" description="无搜索结果" />
+  </block>
+  <block wx:else>
+    <scroll-view scroll-y="true" bindscrolltolower="handleSearchLower">
+      <view class="room-box">
+        <block wx:if="{{rooms.length > 0 }}">
+          <view class="room-item" wx:for="{{rooms}}" wx:for-item="item" wx:key="index">
+            <view class="room-item-title" data-id="{{index}}" bindtap="handleSelectItem">
+              <van-row gutter="20">
+                <van-col span="20">
+                  {{ item.name }}
+                </van-col>
+                <van-col span="4" class="room-item-icon">
+                  <!-- 点击展开二维码 -->
+                  <!-- <image wx:if="{{selectId === index}}" src="../../../icons/retract.svg" ></image>
+                  <image wx:else src="../../../icons/drop-down.svg"></image> -->
+                  <image data-topic="{{item.name}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../icons/copy.svg"></image>
+                </van-col>
+              </van-row>
+            </view>
+            <!-- 点击展开二维码 -->
+            <!-- <view class="room-item-qrcode" wx:if="{{selectId === index}}">
+              <image class="img-qrcode" src="{{item.qrCode}}"></image>
+              <view>
+                {{ item.name }}
+                <image
+                  data-topic="{{item.name}}"
+                  bindtap="handleClickCopy"
+                  class="img-clipbaoard"
+                  src="../../../icons/copy.svg"
+                ></image>
+              </view>
+            </view> -->
+          </view>
+        </block>
+        <block wx:else>
+          <van-empty image="search" description="无搜索结果" />
+        </block>
+      </view>
+    </scroll-view>
+  </block>
+  <movable-area class="join-group">
+    <movable-view class="join-group-button" direction="vertical" bindtap='goQrCode'>
+      <image class="join-group-button-img" src="../../../icons/jiaqun.svg"></image>
+    </movable-view>
+  </movable-area>
+</view>
+<!-- 演出群列表 -->

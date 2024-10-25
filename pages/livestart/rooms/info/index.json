@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "select-city": "/components/select-city/index",
+    "noticebar": "/components/noticebar/index",
+    "tabs": "antd-mini/Tabs/index"
+  },
+  "navigationBarBackgroundColor": "#62B28F",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "LiveStart"
+}

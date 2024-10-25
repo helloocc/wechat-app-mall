@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="138px" viewBox="0 0 200 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>pinglun_wode1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30.0000302,-4.33431069e-13 C46.5682635,-4.33431069e-13 60,13.4317364 60,29.9999697 C60,46.5682029 46.5682636,59.9999724 30.0000302,59.9999724 C24.5731862,60.0080151 19.2466925,58.5373501 14.592796,55.7459436 C14.1239488,55.4682343 13.6539452,55.1924822 13.1827973,54.9186944 L5.84180479,56.9211924 C4.16180651,57.378692 2.62130802,55.8374435 3.07955761,54.1581952 L5.07905556,46.8254526 C4.30505634,45.511454 3.79805683,44.6302049 3.54605709,44.1599554 C1.21137222,39.805787 -0.00699474853,34.9405653 3.02071932e-05,29.9999697 C3.02071932e-05,13.4317365 13.4317971,-4.33431069e-13 30.0000302,-4.33431069e-13 Z M22.8127876,38.6557109 C22.1960525,38.1300259 21.3442751,37.9766029 20.5828778,38.2540575 C19.8214804,38.531512 19.2681064,39.1969746 19.1341727,39.9962047 C19.000239,40.7954347 19.3064397,41.6049435 19.9357905,42.1154574 C22.7611182,44.4686511 26.3230789,45.754981 30.0000303,45.7499684 C33.6760222,45.7548748 37.2370784,44.4691147 40.0620202,42.1169574 C40.6801783,41.6030314 40.9772037,40.7983607 40.8412098,40.006057 C40.7052159,39.2137533 40.1568634,38.5541864 39.4027113,38.2758088 C38.6485592,37.9974311 37.8031813,38.1425349 37.1850231,38.6564609 C35.1802751,40.3237092 32.6640276,41.2499583 30.0000303,41.2499583 C27.3741452,41.2550491 24.8300589,40.3367569 22.8127876,38.6557109 Z" id="path-1"></path>
+        <filter x="-25.0%" y="-15.0%" width="150.0%" height="150.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.211764706   0 0 0 0 0.525490196   0 0 0 0 0.992156863  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="livestart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的" transform="translate(-519.000000, -373.000000)">
+            <g id="pinglun_wode1" transform="translate(519.000000, 375.000000)">
+                <rect id="矩形" fill="#E5EFFF" x="0" y="30" width="200" height="106" rx="8"></rect>
+                <g transform="translate(70.000000, 0.000000)">
+                    <g fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#3686FD" xlink:href="#path-1"></use>
+                    </g>
+                    <circle id="椭圆形" stroke="#FFFFFF" fill="#C74D4D" cx="52" cy="9" r="8.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

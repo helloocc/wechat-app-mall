@@ -1,0 +1,5 @@
+<view style="position: sticky; top: 0; z-index: 100;">
+  <ant-notice loop="{{true}}" type="default" enableMarquee="{{true}}" style="background-color: #F1F4F2;color: #4c956c;font-size:smaller; height: 60rpx; ">
+    <slot></slot>
+  </ant-notice>
+</view>

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="search-container-wrap">
+    <view class="search-container">
+      <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bg-color="  " shape="circle" placeholder="搜索演出名称" bind:linchange="flushSearch" bind:linconfirm="flushSearch" bind:lincancel="onCancel" bind:linclear="onCancle" show-cancel="{{false}}" value="{{searchKey}}" />
+    </view>
+  </view>
+  <view style="margin-bottom: 16rpx;"></view>
+  <view>
+    <block wx:if="{{searchKey.length > 0 && tickets.length==0 }}">
+      <!-- <content-card name="暂无结果"></content-card> -->
+      <van-empty image="search" description="暂无结果" />
+    </block>
+    <block wx:else>
+      <view class="ticket-item" wx:for="{{tickets}}" wx:for-item="item" wx:key="id" bindtap='goDetail' data-ticket-id="{{item.id}}">
+        <ticket value="{{item}}"></ticket>
+      </view>
+    </block>
+  </view>
+  <view class="standout-button big-button" bindtap='gotoTicketPublish'>我要出票</view>
+</view>

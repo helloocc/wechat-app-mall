@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="658px" height="1145px" viewBox="0 0 658 1145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M530,0 C585.228475,-1.01453063e-14 630,44.771525 630,100 L630,548 L620,558 L630,568 L630,1097 C630,1108.04569 621.045695,1117 610,1117 L20,1117 C8.954305,1117 1.3527075e-15,1108.04569 0,1097 L0,569 L10,559 L0,549 L0,20 C-1.3527075e-15,8.954305 8.954305,2.02906125e-15 20,0 L530,0 Z M549,60 C537.40202,60 528,69.4020203 528,81 C528,92.5979797 537.40202,102 549,102 C560.59798,102 570,92.5979797 570,81 C570,69.4020203 560.59798,60 549,60 Z" id="path-1"></path>
+        <filter x="-4.1%" y="-1.4%" width="108.3%" height="104.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.100749069   0 0 0 0 0.308423913   0 0 0 0 0.217566169  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="livestart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="演出-加入演出群" transform="translate(-46.000000, -256.000000)">
+            <g id="bg" transform="translate(60.000000, 260.000000)">
+                <g id="形状结合">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M40,20 L518,20 C568.810197,20 610,61.189803 610,112 L610,548 L610,548 L600,558 L610,568 L610,1077 C610,1088.04569 601.045695,1097 590,1097 L40,1097 C28.954305,1097 20,1088.04569 20,1077 L20,569 L20,569 L30,559 L20,549 L20,40 C20,28.954305 28.954305,20 40,20 Z" id="矩形" stroke="#62B28F"></path>
+            </g>
+        </g>
+    </g>
+</svg>

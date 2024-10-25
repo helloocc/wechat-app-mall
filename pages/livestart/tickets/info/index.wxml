@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="search-container-wrapper">
+    <view class="search-container">
+      <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bg-color="  " shape="circle" placeholder="搜索城市/乐队/演出名称" bind:linchange="handleSearch" bind:linconfirm="handleSearch" bind:lincancel="onCancel" bind:linclear="onCancel" show-cancel="{{false}}" />
+    </view>
+  </view>
+
+  <view class="content-container">
+    <block wx:if="{{keyword.length>0 && tickets.length==0}}">
+      <van-empty image="search" description="无搜索结果" />
+    </block>
+    <block wx:else>
+      <!-- <scroll-view type="list" scroll-y="true" style="height: 1150rpx;" bindscrolltolower="scrollToLower" scroll-top="{{scrollTop}}" > -->
+      <scroll-view type="list" scroll-y="true" scroll-top="{{scrollTop}}">
+        <view class="ticket-item" wx:for="{{tickets}}" wx:for-item="item" wx:key="index" bindtap='goDetail' data-ticket-id="{{item.id}}">
+          <ticket value="{{item}}"></ticket>
+        </view>
+      </scroll-view>
+    </block>
+
+  </view>
+  <view class="standout-button big-button" bindtap='gotoTicketPublish'>我要出票</view>
+</view>

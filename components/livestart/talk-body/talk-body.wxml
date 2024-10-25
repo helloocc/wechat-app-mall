@@ -1,0 +1,23 @@
+<template name="talk-body">
+<view class="flex">
+  <view class='talk-item-left'>
+     <image class='talk-item-face' src='{{item.avatarUrl}}'></image>
+  </view>
+  <view class='talk-item-right'> 
+      <view class='right-left'> 
+      <text class='talk-item-nickname'>{{item.nickName}}</text> 
+    </view> 
+    
+    <view class="column" wx:if="{{item.rebackTalk}}">
+ 
+ 回复{{item.nickName}}:{{item.rebackTalk}}</view>
+
+
+    <text wx:else class='talk-item-content'>{{item.content}}</text>
+    <text class='talk-item-time'>{{item.talkTime}}</text> 
+      <text class="rebackBtn" bindtap="rebackFn" 
+      data-talk-id="{{item.talkId}}"  data-nick-name="{{item.nickName}}">回复</text>
+     
+  </view> 
+</view>
+</template>

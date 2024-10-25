@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "noticebar": "/components/noticebar/index",
+    "ticket": "/components/ticket/index"
+  }
+}

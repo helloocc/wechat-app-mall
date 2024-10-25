@@ -62,7 +62,8 @@
     "pages/card/logs",
     "pages/notagree/index",
     "pages/my/user-code",
-    "pages/raffle/index"
+    "pages/raffle/index",
+    "pages/livestart/liveshow/monthShow/index"
   ],
   "requiredPrivateInfos": [
     "getLocation",
@@ -116,28 +117,28 @@
     "onReachBottomDistance": 50
   },
   "tabBar": {
-    "color": "#6e6d6b",
-    "selectedColor": "#e64340",
+    "color": "#707070",
+    "selectedColor": "#4c956c",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
       {
+        "pagePath": "pages/livestart/liveshow/monthShow/index",
+        "iconPath": "icons/yanchu_sm.png",
+        "selectedIconPath": "icons/yanchu_selected_sm.png",
+        "text": "演出"
+      },     
+      {
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home-off.png",
         "selectedIconPath": "images/nav/home-on.png",
-        "text": "首页"
+        "text": "商城"
       },
       {
         "pagePath": "pages/category/category",
         "iconPath": "images/nav/fl-off.png",
         "selectedIconPath": "images/nav/fl-on.png",
         "text": "分类"
-      },
-      {
-        "pagePath": "pages/coupons/index",
-        "iconPath": "images/nav/coupon-off.png",
-        "selectedIconPath": "images/nav/coupon-on.png",
-        "text": "优惠券"
       },
       {
         "pagePath": "pages/shop-cart/index",

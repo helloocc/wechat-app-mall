@@ -1,0 +1,3 @@
+<view>
+  <ticket-form edit="{{true}}" ticketId="{{ticketId}}"></ticket-form>
+</view>

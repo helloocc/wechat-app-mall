@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="show-data">
+    <block wx:if="{{ tickets.length==0 }}">
+      <van-empty image="search" description="无出票记录" />
+    </block>
+    <block wx:else>
+      <view class="ticket-item" wx:for="{{tickets}}" wx:for-item="item" wx:key="id" bindtap='goDetail' data-ticket-id="{{item.id}}">
+        <ticket value="{{item}}"></ticket>
+      </view>
+    </block>
+  </view>
+</view>

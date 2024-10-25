@@ -1,0 +1,34 @@
+<view class="search-container-wrapper bg-white">
+  <view class="search-container">
+    <l-search-bar 
+      l-class="searchbar" 
+      l-input-class="searchbar-input" 
+      l-container-class="searchbar-container" 
+      bg-color="transparent"
+      shape="circle"
+      placeholder="搜索乐队/演出名称" 
+      bind:linchange="handleFlushSearch" bind:linconfirm="handleFlushSearch" 
+      bind:lincancel="handleCancle" bind:linclear="handleCancle" show-cancel="{{false}}" />
+      <select-city bind:select="handleSelectCity" save></select-city>
+  </view>
+</view>
+<scroll-view class="live-list-box" scroll-y>
+  <view style="width: 100%;">
+    <block wx:if="{{ searchKey.length > 0 && list.length == 0 }}">
+      <van-empty image="search" description="暂无结果" />
+    </block>
+    <block wx:else>
+      <view class="live-item-box" wx:for="{{list}}" wx:key="id" wx:for-item="item">
+        <liveshow-item 
+          id="show-{{item.id}}"
+          value="{{item}}"
+          expand="{{item.id == expandShowId}}"
+          isTicket
+          bind:select="handleSelectLiveItem"
+        >
+        </liveshow-item>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<view class="nolive-btn" bindtap='handleNoLiveshow'>未查找到对应演出 >></view>

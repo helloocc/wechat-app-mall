@@ -1,0 +1,175 @@
+/* pages/rooms/rooms.wxss */
+page {
+  background-color: #62B28F;
+}
+/* START 搜索框 */
+.search-container-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 60rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background-color: #62B28F;
+}
+
+.search-container {
+  margin: 0 24rpx 0rpx 24rpx;
+  padding-right: 24rpx;
+  width: 676rpx;
+  display: flex;
+  /* border: 1px solid #fff; */
+  border-radius: 53rpx;
+  height: 60rpx;
+  justify-content: space-between;
+  background-color:  rgba(255, 255, 255, 0.35);
+}
+.searchbar-container{
+  padding-left: 0rpx !important;
+  height: 60rpx !important;
+}
+
+.searchbar-input {
+  width: 400rpx !important;
+  background-color: transparent !important;
+  height: 60rpx !important;
+  font-size: 24rpx !important;
+  color: #fff !important;
+}
+
+.city-container {
+  display: flex;
+  align-items: center;
+}
+
+.city-name {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #fff;
+}
+
+.city-line {
+  display: inline-block;
+  color: #fff;
+  margin-right: 16rpx;
+}
+
+.city-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+/* END 搜索框 */
+
+/* START Tabs */
+
+.tab-active {
+  font-weight: 400 !important;
+}
+.tab-active:after {
+  background-color: white !important;
+  width: 100% !important;
+}
+.tab-item {
+  font-size: medium !important;
+  font-weight: 300;
+  color: #fff !important;
+}
+.tab-container {
+  height: 80rpx;
+  position: sticky;
+  top: 160rpx;
+  z-index: 100;
+  margin: 0 24rpx;
+  padding-bottom: 24rpx;
+  box-sizing: border-box;
+  background-color: #62B28F !important;
+}
+.tabs-bar {
+  /* antd 有 bug，它将 tabs-bar 防错了地方（将该class同时放在了外层container和内层每个tab元素），所以这里面会有很多 ugly 逻辑*/
+  background-color: #62B28F !important;
+  /* ant 默认只在文字下面高亮，livestart 设计搞是对整个 tab 高亮，高亮范围更大，所以用 flex-grow 属性定制下 */
+  flex-grow: 1;
+}
+
+/* END Tabs */
+
+.list-box {
+  padding: 0 24rpx 30rpx 24rpx;
+}
+
+
+.room-box {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0 30rpx;
+}
+
+
+.room-item {
+  /* padding: 30rpx 0; */
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.room-item-title {
+  padding-top: 30rpx;
+  font-size: 28rpx;
+  padding-bottom: 30rpx;
+}
+
+.room-item-title image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.room-item-icon {
+  text-align: center;
+}
+.room-item-qrcode {
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+}
+
+.img-qrcode{
+  width: 280rpx;
+  height: 280rpx;
+  margin-bottom: 14rpx;
+}
+
+.img-clipbaoard {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: -6rpx;
+}
+
+.join-group {
+  pointer-events: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+}
+
+.join-group-button {
+  pointer-events: auto;
+  left: 80%;
+  top: 80%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.join-group-button-img {
+  width: 108rpx;
+  height: 108rpx;
+}
+
+.join-group-button-img-notice {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -14rpx;
+}

@@ -1,0 +1,38 @@
+<view class="page">
+  <view>
+    <!-- <l-tabs bind:linchange="onChangeTabs" l-active-class="tab-active" l-line-class="tab-line" swipeable="true" content-height="{{contentHeight}}">
+      <l-tabpanel tab="演出收藏" key="show" slot="show"> -->
+        <view wx:if="{{shows.length == 0}}">
+          <view name="暂无收藏" class="no-collect"> 暂无收藏 </view>
+        </view>
+        <scroll-view scroll-y="true" 	show-scrollbar="{{false}}" style="height:{{contentHeight}}rpx">
+          <view style="margin-bottom: 16rpx;"></view>
+          <view wx:for="{{shows}}" wx:for-item="show" wx:key="id">
+            <!-- <view bindtap="onTapLiveshowItem" data-id="{{show.id}}">
+              <liveshow value="{{show}}" expand="{{show.id == expandShowId}}"></liveshow>
+            </view> -->
+            <liveshow-item
+              isDetail 
+              value="{{show}}"
+              expand="{{show.id == expandShowId}}"
+              bind:select="handleSelectLiveItem"
+            ></liveshow-item>
+          </view>
+        </scroll-view>
+      <!-- </l-tabpanel> -->
+      <!-- <l-tabpanel tab="出票收藏" key="ticket" slot="ticket">
+        <view wx:if="{{tickets.length == 0}}">
+          <view name="暂无收藏" class="no-collect"> 暂无收藏 </view>
+        </view>
+        <scroll-view scroll-y="true"	show-scrollbar="{{false}}" style="height:{{contentHeight}}rpx">
+          <view style="margin-bottom: 16rpx;"></view>
+          <view wx:for="{{tickets}}" wx:for-item="ticket" wx:key="id">
+            <view data-id="{{ticket.id}}" style="margin-bottom: 24rpx;">
+              <ticket value="{{ticket}}"></ticket>
+            </view>
+          </view>
+        </scroll-view>
+      </l-tabpanel> -->
+    <!-- </l-tabs> -->
+  </view>
+</view>

@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@vant/weapp": "^1.11.6",
+    "antd-mini": "^2.36.7",
     "apifm-wxapi": "^24.06.19",
     "dayjs": "^1.11.6",
     "mp-html": "^2.3.1",

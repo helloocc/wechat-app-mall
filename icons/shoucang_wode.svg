@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="138px" viewBox="0 0 200 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>shoucang_wode</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M87.1407723,59.1794207 C84.5313124,60.7886251 81.1189419,59.956331 79.5340458,57.336374 C78.782715,56.0924237 78.5492007,54.6068937 78.8830371,53.1949033 L82.2605322,38.8989835 C82.3424844,38.559956 82.2302617,38.2036452 81.9683533,37.9713064 L70.9128308,28.4099245 C68.6164751,26.4253416 68.3514216,22.9546292 70.3145228,20.6408209 C71.2580044,19.5258373 72.6112678,18.8312767 74.0733229,18.7116218 L88.5822915,17.538564 C88.8984957,17.5124106 89.1813745,17.3054909 89.3108013,16.9908806 L94.9009508,3.42110286 C96.0657914,0.594226066 99.3053346,-0.755751832 102.131797,0.431151765 C103.479794,0.999743784 104.546347,2.07464091 105.098537,3.42110286 L110.688687,16.9901115 C110.818113,17.3054909 111.100992,17.5131798 111.417196,17.538564 L125.927715,18.7123909 C128.970405,18.9585407 131.223361,21.6300355 130.982332,24.6630628 C130.869109,26.1104638 130.188827,27.4561658 129.087432,28.4114629 L118.03191,37.9728448 C117.774606,38.1951489 117.658355,38.555143 117.739731,38.8997527 L121.117226,53.1956725 C121.816285,56.1533164 120.001211,59.1332676 117.038346,59.8463329 C115.611523,60.1900324 114.105389,59.9499871 112.858716,59.1801899 L100.436075,51.5187769 C100.169288,51.3525703 99.8301997,51.3525703 99.5634131,51.5187769 L87.1407723,59.1794207 Z" id="path-1"></path>
+        <filter x="-24.2%" y="-15.0%" width="148.4%" height="150.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.988235294   0 0 0 0 0.792156863   0 0 0 0 0.0862745098  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="livestart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的" transform="translate(-31.000000, -373.000000)">
+            <g id="shoucang_wode" transform="translate(31.000000, 375.000000)">
+                <rect id="矩形" fill="#FFF7DC" x="0" y="30" width="200" height="106" rx="8"></rect>
+                <g fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FCCA16" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

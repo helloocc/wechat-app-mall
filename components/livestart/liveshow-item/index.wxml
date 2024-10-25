@@ -1,0 +1,50 @@
+<view class="liveshow">
+  <view class="simple" wx:if="{{!expand}}" data-id="{{id}}" bindtap="handleSelectLiveItem">
+    <view class="day">
+      <view class="date">{{day}}</view>
+      <view>{{weekday}}</view>
+    </view>
+    <view class="title">
+      {{is_new}}{{title}}{{room_info}}
+    </view>
+  </view>
+  <view class="detail" wx:if="{{expand}}" data-id="{{id}}" bindtap="handleClickExpand">
+    <view class="day">
+      <!-- <view style="width: 100%;"> -->
+        <view class="date">{{day}}</view>
+        <view>{{weekday}}</view>
+      <!-- </view> -->
+    </view>
+    <view class="content">
+      <view class="title">{{title}}</view>
+      <view wx:if="{{is_festival}}" class="attr">
+        <icon class="info-icon" name="performers"></icon>
+        <text class="attr-text" decode="true">{{performers}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="time"></icon>
+        <text class="attr-text" decode="true">{{time}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="site"></icon>
+        <text class="attr-text" decode="true">{{city}}-{{site}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="url"></icon>
+        <text class="attr-text" decode="true">{{url || source || "暂无"}} </text>
+      </view>
+      <!-- <view wx:if="{{related_rooms}}" class="attr">
+        <icon class="info-icon" name="group"></icon>
+        <text class="attr-text" user-select="true" decode="true"> 群名：{{related_rooms}} </text>
+      </view> -->
+    </view>
+    <view class="action">
+      <view wx:if="{{isTicket}}">
+        <button class="ticket-btn" data-id="{{id}}" bindtap="handleClickTicket">出票</button>
+      </view>
+      <view wx:if="{{isDetail}}">
+        <image src="../../../icons/jump.svg" ></image>
+      </view>
+    </view>
+  </view>
+</view>

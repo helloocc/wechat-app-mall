@@ -1,0 +1,116 @@
+/* components/liveshow-item/index.wxss */
+
+@import "./font.wxss"
+
+.liveshow {
+  color: #666;
+}
+
+.simple {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+}
+
+.simple .title {
+  margin-bottom: 0;
+  max-width: 580rpx;
+  overflow-wrap: break-word;
+}
+
+.day {
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  width: 80px;
+  flex-basis: 15%;
+}
+
+.title {
+  flex-basis: 85%;
+  font-size-adjust: 0.5;
+  align-items: center;
+  display: flex;
+  margin-left: 8rpx;
+  line-height: 36rpx;
+  font-size: 28rpx;
+  color: #333333;
+  margin-bottom: 20rpx;
+  /* max-width: 580rpx; */
+  word-break: break-word;
+}
+
+.detail {
+  font-size: 24rpx;
+  line-height: 160%;
+  background-color: #F1F4F2;
+  line-height: 50rpx;
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail .attr {
+  display: flex;
+  font-size: 22rpx;
+  color: #333333;
+  width: 100%;
+  /* width: 560rpx; */
+}
+
+.detail .info-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 24rpx;
+}
+
+.content {
+  flex-basis: 80%;
+}
+
+.attr-text {
+  /* padding-right: 40rpx; */
+  /* width: 480rpx; */
+  text-align: left;
+  word-break: break-word;
+  display: block;
+}
+
+.zhenrong-icon {
+  width: 34rpx;
+  height: 62rpx;
+  margin: -10rpx 15rpx 20rpx 0;
+  vertical-align: text-top;
+}
+
+.date {
+  color: #62b28f;
+  font-size: 30rpx;
+  /* margin-bottom: 4rpx; */
+  line-height: 36rpx;
+  font-family: DINPro, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+.ticket-btn {
+  margin-right: 16rpx;
+  background: #62B28F;
+  border-radius: 40px;
+  height: 44rpx;
+  line-height: 44rpx;
+  padding: 0 20rpx;
+  color: #fff;
+  font-size: 22rpx;
+  width: 100rpx;
+}
+
+.action {
+  flex-basis: 5%;
+}
+
+.action image {
+  width: 20rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+}

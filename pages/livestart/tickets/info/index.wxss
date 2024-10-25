@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+}
+
+.ticket-item {
+  margin-bottom: 30rpx;
+}
+
+.search-container-wrapper{
+  position: fixed;
+  top: 0;
+  height: 80rpx;
+  padding: 20rpx 24rpx 8rpx 24rpx;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.search-container { 
+  display: fixed;
+  border: 1px solid rgb(78, 163, 122);
+  border-radius: 53rpx;
+  height: 60rpx;
+  justify-content: space-between;
+}
+
+.searchbar {
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-container {
+  width: 700rpx !important;
+  padding: 0rpx !important;
+  height: 60rpx !important;
+}
+
+.searchbar-input {
+  width: 400rpx !important;
+  background-color: transparent !important;
+  height: 60rpx !important;
+  font-size: 24rpx !important;
+}
+
+.content-container {
+  padding: 0 24rpx;
+  margin-top: 116rpx;
+}

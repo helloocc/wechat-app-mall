@@ -1,0 +1,108 @@
+
+.simple {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  padding-left: 28rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.simple .title {
+  color: #333333;
+  font-size: 28rpx;
+  font-size-adjust: 0.5;
+  padding: 0 8rpx !important;
+}
+
+.detail {
+  font-size: 24rpx;
+  line-height: 160%;
+  /* background-color: #E9F4EF ;*/
+  background-color: #F1F4F2 ;
+  width: 100%;
+  min-height: 270rpx;
+  line-height: 50rpx;
+}
+
+.detail .month {
+  float: left;
+  width: 80rpx;
+  margin: 90rpx 30rpx 0 30rpx;
+  text-align: center;
+}
+
+.detail .title {
+  font-size: 28rpx;
+  color: #333333;
+  margin: 30rpx 90rpx 15rpx 0;
+}
+
+.detail .attr {
+  display: flex;
+  font-size: 22rpx;
+  color: #333333;
+  width: 560rpx;
+}
+
+.detail .info-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 24rpx;
+}
+
+.attr-text {
+  padding-right: 40rpx;
+  width: 480rpx;
+  text-align: left;
+}
+
+.zhenrong-icon {
+  width: 34rpx;
+  height: 62rpx;
+  margin: -10rpx 15rpx 20rpx 0;
+  vertical-align: text-top;
+}
+
+.date {
+  color: #62b28f;
+  font-size: 28rpx;
+  margin-bottom: 4rpx;
+  line-height: 36rpx;
+  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24rpx;
+  font-size: 22rpx;
+  color: #666;
+}
+
+.liveshow {
+  color: #666;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  line-height: 36rpx;
+  float: left;
+  justify-content: center;
+  margin-right: 30rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18rpx;
+}
+
+.footer .action {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

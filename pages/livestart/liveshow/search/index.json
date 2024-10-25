@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "liveshow-item": "/components/liveshow-item/index"
+  },
+  "navigationBarTitleText": "演出搜索"
+  
+}

@@ -1,0 +1,54 @@
+<view class="liveshow">
+  <view class="simple" wx:if="{{!expand}}">
+    <view class="day">
+      <text class="date">{{day}}</text>
+      <text>{{weekday}}</text>
+    </view>
+    <text class="title">{{is_new}}{{title}}{{room_info}}</text>
+  </view>
+  <view class="detail" wx:if="{{expand}}">
+    <!-- <image class="collect-shoucang"   src="{{collectIcon}}" data-show-id="{{id}}" bindtap="collect"/> -->
+    <view class="month day">
+      <text class="date">{{day}}</text>
+      <text>{{weekday}}</text>
+    </view>
+    <view class="column-flex">
+      <view class="title">
+        {{title}}
+      </view>
+      <view style="display: flex;" wx:if="{{is_festival}}" class="attr">
+        <icon class="info-icon" name="performers"></icon>
+        <text class="attr-text" decode="true">{{performers}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="time"></icon>
+        <text class="attr-text" decode="true">{{time}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="site"></icon>
+        <text class="attr-text" decode="true">{{city}}-{{site}}</text>
+      </view>
+      <view class="attr">
+        <icon class="info-icon" name="url"></icon>
+        <text class="attr-text" user-select="true" decode="true">{{url || source || "暂无"}} </text>
+      </view>
+      <view wx:if="{{related_rooms}}" class="attr">
+        <icon class="info-icon" name="group"></icon>
+       <text class="attr-text" user-select="true" decode="true"> 群名：{{related_rooms}} </text>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="action" catch:tap="onJoinus">
+        <icon fill="{{related_rooms}}" name="joinus"></icon>
+        <view wx:if="{{related_rooms}}" style="color:#62b28f">加群</view>
+        <view wx:else="{{!related_rooms}}" style="color:#ccc">暂无群（有群可拉小助手进群）
+        </view>
+      </view>
+      <!-- TODO: 等待登录功能实现 -->
+      <!-- <view class="action" catch:tap="onFavor">
+        <icon name="like" fill="{{is_favor}}"></icon>
+        <view>{{is_favor ? '已' : ''}}收藏</view>
+      </view> -->
+    </view>
+  </view>
+</view>

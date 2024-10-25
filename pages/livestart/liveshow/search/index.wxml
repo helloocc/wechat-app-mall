@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="search-container-wrap">
+  <view class="search-container">
+    <l-search-bar l-container-class="searchbar" l-class="searchbar-input" focus="{{focusSearchInput}}" bind:linchange="handleSearch" bind:linconfirm="handleSearch"  bind:bind:linclear="onClearSearch" bind:lincancel="onCancelSearch" bg-color="#fff" shape="circle" placeholder="搜索乐队/演出名称/场地" show-cancel="{{true}}" value="{{search}}" />
+  </view></view>
+  <view class="result-container">
+    <view wx:if="{{search === ''}}" class="history">
+      <view id="history-title">
+        搜索历史:
+      </view>
+      <view wx:for="{{searchHistory}}" wx:key="*this" wx:for-index="index" id="history-list">
+        <view class="history-item">
+          <view class="content" bindtap="onSelectHistory" data-index="{{index}}">
+            <l-icon name="research" />
+            <text>{{item}}</text>
+          </view>
+          <l-icon name="close" data-index="{{index}}" bindtap="onRemoveHistory" />
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{search && showData.length==0}}" class="no-result">
+        <van-empty image="search" description="无搜索结果" />
+    </view>
+    <view wx:else="" class="show-data">
+      <view wx:for="{{showData}}" wx:for-item="monthData" wx:key="month">
+        <view wx:for="{{monthData.month_show}}" wx:key="id" wx:for-item="show">
+          <liveshow-item isDetail value="{{show}}" expand="{{show.id == expandShowId}}" bind:select="handleSelectLiveItem"></liveshow-item>
+          <!-- <view bindtap="onTapLiveshowItem" data-id="{{show.id}}"> -->
+          <!-- <liveshow-item id="show-{{show.id}}" value="{{show}}" expand="{{show.id == expandShowId}}"></liveshow-item> -->
+          <!-- </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

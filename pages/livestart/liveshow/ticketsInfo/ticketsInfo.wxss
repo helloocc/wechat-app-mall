@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  padding: 20rpx 24rpx 0 24rpx;
+}
+
+.ticket-item {
+  margin-bottom: 30rpx;
+}
+
+.search-container-wrap {
+  height: 80rpx;
+}
+
+.search-container {
+  display: flex;
+  border: 1px solid rgb(78, 163, 122);
+  border-radius: 53rpx;
+  height: 60rpx;
+  justify-content: space-between;
+}
+
+.searchbar {
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-container {
+  width: 690rpx !important;
+  padding: 0rpx !important;
+  height: 60rpx !important;
+}
+
+.searchbar-input {
+  width: 400rpx !important;
+  background-color: transparent !important;
+  height: 60rpx !important;
+  font-size: 24rpx !important;
+}

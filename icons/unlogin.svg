@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>头像</title>
+    <desc>Created with Sketch.</desc>
+    <g id="livestart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的(未登陆)" transform="translate(-30.000000, -180.000000)">
+            <g id="头像" transform="translate(30.000000, 180.000000)">
+                <circle id="oo" fill="#E5E5E5" cx="60" cy="60" r="60"></circle>
+                <path d="M60,78.5 C78.0378181,78.5 93.9710289,87.5108948 103.543749,101.276801 C92.6098889,112.809074 77.1447098,120 60,120 C42.8552902,120 27.3901111,112.809074 16.4559891,101.278749 C26.0289711,87.5108948 41.9621819,78.5 60,78.5 Z M60,25 C73.8071187,25 85,36.1928813 85,50 C85,63.8071187 73.8071187,75 60,75 C46.1928813,75 35,63.8071187 35,50 C35,36.1928813 46.1928813,25 60,25 Z" id="touxiang" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

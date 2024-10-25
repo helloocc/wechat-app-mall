@@ -1,0 +1,40 @@
+<view id="page">
+  <noticebar wx:if="{{showNotice}}" closable="{{false}}" bindclose="onCloseNotice">
+    <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../icons/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
+  </noticebar>
+  <view class="search-container-wrapper bg-white">
+    <view class="search-container">
+      <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bind:tap="gotoSearchShowPage" bg-color="transparent" shape="circle" placeholder="搜索乐队/演出名称/场地" show-cancel="{{false}}" />
+      <select-city bind:select="handleSelectCity" save></select-city>
+    </view>
+  </view>
+
+  <view class="ad-section mt-md" wx:if="{{banners.length > 0}}">
+    <swiper class="swiper" autoplay="{{true}}" duration="{{500}}" interval="{{5000}}" indicator-dots="{{banners.length > 1}}">
+      <block wx:for="{{banners}}" wx:key="id">
+        <!-- <swiper-item class="swiper-item" style="background-image: url({{item.url}})"> -->
+        <swiper-item>
+          <image class="swiper-item" src="{{item.url}}" mode="aspectFill" bind:tap="gotoSearchShowPage" data-keyword="{{item.keyword}}" >
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <tabs className="month-header" items="{{ showData }}" current="{{ currentMonth }}" bind:change="onChangeMonth" scrollMode="center" tabActiveClassName="active" tabClassName="month-header-item">
+    <view slot="title" slot-scope="item" className="month-header-item"></view>
+  </tabs>
+  <scroll-view id="scroll-view" enhanced="{{true}}" bind:dragging="onScroll" binddragstart="onScrollStart" scroll-top="{{ scrollTop }}" scroll-y="{{ true }}" scroll-with-animation="{{ true }}" scroll-animation-duration="{{ 300 }}">
+    <view wx:for="{{showData}}" wx:for-item="monthData" wx:key="month" key="{{month}}" class="showMonth" id="{{'month-'+ monthData.month}}">
+      <view wx:for="{{monthData.month_show}}" wx:key="id" wx:for-item="show">
+        <liveshow-item isDetail value="{{show}}" expand="{{false}}" bind:select="handleSelectLiveItem"></liveshow-item>
+      </view>
+    </view>
+  </scroll-view>
+
+  <movable-area class="join-group">
+    <movable-view class="join-group-button" direction="vertical" bindtap='goQrCode'>
+      <image class="join-group-button-img" src="../../../icons/jiaqun.svg"></image>
+    </movable-view>
+  </movable-area>
+</view>

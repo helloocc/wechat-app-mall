@@ -1,0 +1,93 @@
+
+<view class="header-box">
+  <!-- 演出详情页 -->
+  <view class="detail-bg">
+    <view wx:if="{{info.poster_thumbnail}}">
+      <image src="{{info.poster_thumbnail}}"></image>
+    </view>
+    <view wx:else="">
+      <image src="../../../images/noPic.jpg"></image>
+    </view>
+  </view>
+  <view class="detail-box" style="{{info.performers.length>60 ?'margin-top:-52rpx':'margin-top:0rpx'}}">
+    <view class="detail-title">{{info.title}}</view>
+    <view class="detail-performers">{{info.performers}}</view>
+    <view class="detail-day">
+      <image src="../../../icons/time2.svg"></image>{{info.dayTime}}
+    </view>
+    <view class="detail-site">
+      <view wx:if="{{info.site_visible}}">
+        <image src="../../../icons/dizhi2.svg"></image>
+        <text bindtap="goToSiteDetails">{{info.city}}-{{info.site}}</text>
+      </view>
+      <view wx:else="">
+        <image src="../../../icons/dizhi2.svg"></image>
+        {{info.city}}-{{info.site}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class="detail-line"></view>
+<view class="info-box">
+  <view class="info-title">购票链接</view>
+  <view class="info-content">
+    <van-row>
+      <view wx:if="{{info.url}}">
+        <van-col span="23">{{info.url}} </van-col>
+        <van-col span="1">
+          <view class="ta-right">
+            <image src="../../../icons/copy.svg" data-topic="{{info.url}}" bindtap="handleClickCopyUrl" class="img-clipboard"></image>
+          </view>
+        </van-col>
+      </view>
+      <view wx:else="">{{info.source || "暂无"}}</view>
+    </van-row>
+  </view>
+  <view class="info-title">票价</view>
+  <view class="info-content">
+    <van-row>
+      <view wx:if="{{info.prices_str}}">
+        <van-col span="20">{{info.prices_str}}</van-col>
+        <van-col span="4">
+          <!-- <view class="ta-right">
+            <view class="btn-ticket" bindtap="handleClickTicket">出票列表</view>
+          </view> -->
+        </van-col>
+      </view>
+      <view wx:else="">{{info.prices_str || "暂无"}}</view>
+    </van-row>
+  </view>
+  <view class="info-title">相关群聊</view>
+  <view class="info-content">
+    <view class="qrcode-box">
+      <!-- <image src="../../../icons/jump.svg" class="img-icon"></image> -->
+      <image src="{{botQrCode}}" class="img-qrcode" mode="aspectFit" show-menu-by-longpress="true"></image>
+      <!-- <image src="../../../icons/jump.svg" class="img-icon"></image> -->
+    </view>
+    <van-row>
+      <view wx:if="{{info.related_rooms}}">
+        <van-col span="23" class="qrcode-text">添加好友后，发送：#加群 {{info.related_rooms}} </van-col>
+        <van-col span="1">
+          <view class="ta-right">
+            <image src="../../../icons/copy.svg" data-topic="{{info.related_rooms}}" bindtap="handleClickCopyRoomName" class="img-clipboard"></image>
+          </view>
+        </van-col>
+      </view>
+      <view wx:else="">
+        <van-col span="23" class="qrcode-text">暂无相关群聊</van-col>
+      </view>
+    </van-row>
+  </view>
+</view>
+<!-- <view class="other-box"> -->
+<!-- —————— 其他详情 —————— -->
+<!-- </view> -->
+<view class="footer">
+  <view class="footer-box">
+    <view bindtap="handleClickLike">
+      <image wx:if="{{info.is_favor}}" src="../../../icons/like-fill.svg" class="icon-like"></image>
+      <image wx:else src="../../../icons/like.svg" class="icon-like"></image>
+    </view>
+    <button open-type="share">演出分享</button>
+  </view>
+</view>

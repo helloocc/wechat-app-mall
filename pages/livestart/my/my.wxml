@@ -1,0 +1,53 @@
+
+
+<view>
+  <view class="user-info flex-start">
+    <image class="head-bg" src="../../../icons/bg.jpg" />
+    <block wx:if="{{isLogin}}">
+      <image src="../../../icons/unlogin.svg" class="user-avatar"></image>
+      <text class="login-btn">{{ userInfo.nickname || "设置昵称" }}</text>
+      <image src="../../../icons/bianji.png" class="edit-icon" bindtap="handleClickUpdate"></image>
+    </block>
+    <block wx:else>
+      <image bindtap="handleClickLogin" src="../../../icons/unlogin.svg" class="user-avatar"></image>
+      <text bindtap="handleClickLogin" class="login-btn">点击登录</text>
+    </block>
+  </view>
+</view>
+<view class='flex-evenly' wx:if="{{isLogin}}">
+  <view class="mySpace" bindtap="gotoMyCollect">
+    <image src="../../../icons/shoucang_wode.svg"></image>
+    <text class="text">我的收藏</text>
+  </view>
+  <view class="mySpace" bindtap="gotoMyTickets">
+    <image src="../../../icons/chupiao.svg"></image>
+    <text class="text">我的出票</text>
+  </view>
+  <!-- 
+  <view class="mySpace">
+    <image src="../../../icons/pinglun_wode1.svg"></image>
+    <text class="text">评论及回复</text>
+  </view>
+  -->
+</view>
+<view class="cell" bindtap="gotoContactUs">
+  <view class="flex-center">
+    <image class="list-icon-big" width="20" src="../../../icons/lianxi.svg" />
+    <text class="ml-md fs-md">联系我们</text>
+  </view>
+  <image class="arrow-right" src="../../../icons/jing.svg" />
+</view>
+<!-- <view class="cell" bindtap="">
+  <view class="flex-center">
+    <image class="list-icon" width="20" src="../../../icons/xieyi.svg" />
+    <text class="ml-md fs-md">用户协议</text>
+  </view>
+  <image class="arrow-right" src="../../../icons/jing.svg" />
+</view> -->
+<view wx:if="{{isLogin}}" class="cell" bindtap="handleClickLoginExit">
+  <view class="flex-center">
+    <image class="list-icon" width="20" src="../../../icons/tuichu.svg" />
+    <text class="ml-md fs-md">退出登录</text>
+  </view>
+  <image class="arrow-right" src="../../../icons/jing.svg" />
+</view>

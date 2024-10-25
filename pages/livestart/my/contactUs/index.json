@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "select-city": "/components/select-city/index"
+  },
+  "navigationBarBackgroundColor": "#62B28F",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "联系我们"
+}

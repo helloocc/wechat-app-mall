@@ -1,0 +1,48 @@
+page {
+  /* opacity: 0.22; */
+  background-image: linear-gradient(72deg, #FFFFFF 0%, #C4F2DE 70%, #FFFBE2 100%);
+}
+.login-box {
+  margin-top: 230rpx;
+  padding: 0 16rpx;
+}
+.logo-box {
+  height: 210rpx;
+  display: flex;
+  margin-bottom: 188rpx;
+}
+.logo-box image {
+  width: 210rpx;
+  height: 210rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.btn-box {
+  padding: 0 85rpx;
+}
+button.login-btn {
+  width: 100%;
+  background: #62B28F;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 48rpx;
+  line-height: 90rpx;
+  margin-bottom: 40rpx;
+  font-weight: inherit;
+}
+button.btn-disable {
+  background-color: #A2D1BC;
+}
+.chk-agree {
+  display: inline-block;
+  /* margin-right: 10rpx; */
+}
+.btn-agree {
+  color: #5080E6;
+  display: inline-block;
+}
+.text-box {
+  text-align: center;
+  color: #999;
+  font-size: 22rpx;
+}

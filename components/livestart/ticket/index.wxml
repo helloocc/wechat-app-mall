@@ -1,0 +1,28 @@
+<view class="ticket">
+  <view class="status">
+    <image src="{{value.status_icon}}" />
+    <text>{{value.status}}</text>
+  </view>
+  <view class="title {{value.performers ? '' : 'hide'}}">{{value.performers}}</view>
+  <view class="meta">
+    <text class="city">{{value.city}}</text>
+    <text class="showTime"> {{value.show_day}}  {{value.show_weekday}}  </text>
+  </view>
+  <view class="content">{{value.description}}，{{value.price}} 元/张（{{value.count}}张），场地：{{value.city}}-{{value.site}}</view>
+  <view wx:if="{{value.show_tel}}" class="contact">
+    联系微信/手机：
+    <text user-select="true" decode="true">{{value.contact_info}}</text>
+    <image data-contact_info="{{value.contact_info}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../icons/copy.svg"></image>
+  </view>
+  <view class="footer">
+    <view class="info">[{{value.nickname}}] 发布于 {{value.create_time}}</view>
+    <view wx:if="{{value.can_edit}}" class="action">
+      <span>
+        <van-icon name="edit" bindtap="onEdit" data-id="{{value.id}}"/>
+      </span>
+      <!-- <span>
+        <van-icon name="{{ is_favor ? 'like' : 'like-o'}}" color="#EF6221" bind:tap="onFavor" />
+      </span> -->
+    </view>
+  </view>
+</view>

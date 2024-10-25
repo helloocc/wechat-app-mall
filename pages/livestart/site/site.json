@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "liveshow-item": "/components/liveshow-item/index",
+    "noticebar": "/components/noticebar/index",
+    "tabs": "antd-mini/Tabs/index",
+    "select-city": "/components/select-city/index"
+  },
+  "navigationBarBackgroundColor": "#62B28F",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "场地演出"
+}

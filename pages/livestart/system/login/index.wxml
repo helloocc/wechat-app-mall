@@ -1,0 +1,17 @@
+<view class="login-box">
+  <view class="logo-box"><image src="../../../images/logo.png"></image></view>
+  <view class="btn-box">
+    <button wx:if="{{isCheck}}" class="login-btn" open-type="getPhoneNumber" bindgetphonenumber="onClicklogin">授权手机号快速登录</button>
+    <button wx:else class="login-btn btn-disable">授权手机号快速登录</button>
+    <view class="text-box">
+      <checkbox-group class="chk-agree" bindchange="checkboxChange">
+        <label>
+          <checkbox value="1"></checkbox>
+        </label>
+      </checkbox-group>
+      已阅读并同意
+      <view class="btn-agree" bindtap="onAgreePrivate">《用户服务协议》</view>
+      <view class="btn-agree" bindtap="onAgreeRegister">《隐私政策》</view>
+    </view>
+  </view>
+</view>

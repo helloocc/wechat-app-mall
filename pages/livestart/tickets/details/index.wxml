@@ -1,0 +1,70 @@
+<import src="../../components/review/review.wxml"/>
+<view class="menuList" wx:if="{{ showMenu}}">
+    <ul class="ul-list">
+    <li>分享</li>
+    <li>修改状态</li>
+    <li>编辑</li>
+    </ul>
+</view>
+
+<view class="flex" style="margin-left:35rpx;margin-top: 34rpx;">
+            <image class="titlePic" src="../../images/u18.jpeg" />
+           <view class="column"> 
+            <view>昵称123123123</view>
+                <view style="color:#999;font-size: 22rpx;">{{show.show_time}}</view>
+           </view>
+           <!-- <view class="" wx:if="{{show.status==1}}"> -->
+           
+        <!-- </view> --> 
+        <view class="size25 iconRight">
+          <!-- <image class="comentsIcon" src="../../../icons/gengduo.svg" /> -->
+        
+        <image style="float:right;margin:0 10rpx 0 40rpx;" bindtap="showMenuList" class="moreIcon" src="../../../icons/gengduo.svg" />
+       
+       
+        </view> 
+        </view>
+        <!-- <view class="containerTxt">
+          <view class="imgStatusContainer">
+          <image class="imgStatus" src="../../../icons/chupiaozhong.svg" />
+          <text>出票中</text>
+          </view>
+          <view class="container">
+          <view class="size30">{{show.performers}}</view>
+          <view class="size30 "><text class="cityBackground">{{show.city}}</text><text class="border">{{show.show_day}} {{show.show_weekday}}</text></view>
+        <view class="size30">{{show.description}}</view>
+      </view>
+        </view> -->
+        <view class="borderBottom detailContainer">
+        <view class="containerBlock">
+          <view class="imgStatusContainer"><image class="imgStatus" src="../../../icons/chupiaozhong.svg" />
+          <text>出票中</text>
+          </view>
+          <view class="show-title show-title-detail">{{show.performers}}</view>
+          <view class="size27"><text class="cityBackground">{{show.city}}</text><text class="border"> {{show.show_day}}  {{show.show_weekday}}  </text></view>
+        <view class="size26" style="padding-bottom: 20rpx;">{{show.description}}</view>
+       
+       
+        
+      </view>
+    </view>
+   
+
+
+        <!-- <view class="comments"> -->
+        <!-- <view class="totalTxt">
+        共{{commentsNum}}条评论
+        </view> -->
+        <!-- <view class="flex" wx:for="{{commentsData}}" wx:for-item="comment"  wx:key="id"  >
+                <image class="titlePic" src="{{comment.url}}" />
+               <view class="column">
+                {{comment.nickName}} 
+                <view class="mainTxt">  {{comment.txt}}  </view>
+                  <view>{{comment.time}}
+                  <text>回复</text>
+                  </view>
+                </view>
+         </view> -->
+        <!-- </view> -->
+
+        <!-- <template is="review" data="{{talks}}"/> -->

@@ -1,0 +1,25 @@
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-small {
+  padding: 8rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background-size: 20rpx;
+}
+
+.icon-default {
+  padding: 10rpx;
+  width: 28rpx;
+  height: 28rpx;
+  background-size: 28rpx;
+}
+
+.icon-large {
+  padding: 12rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background-size: 36rpx;
+}

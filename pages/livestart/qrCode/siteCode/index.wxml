@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="contactInfo">
+    <view class="green">
+      <!-- <view class="qrcode-location">
+        <select-city bind:select="handleSelectCity" save type="white"></select-city>
+      </view> -->
+      <view class="qrcode-bg">
+        <image src="../../../icons/bg.svg"></image>
+      </view>
+      <view class="qrcode-container">
+        <view class="qrcode">
+          <image src="{{botQrCode}}" mode="aspectFit" show-menu-by-longpress="true" binderror="noBot"></image>
+        </view>
+        <!-- <view class="divider-xl"></view> -->
+        <view class="qrcode-text">
+          <text>长按添加好友后，发送：\n#加群 {{roomKey}}</text>
+          <image src="../../../icons/copy.svg" data-topic="{{roomKey}}" bindtap="handleClickCopy"></image>
+        </view>
+      </view>
+      <view class="goLiveshow" bindtap='goLiveshow'>点击查看更多演出资讯 >></view>
+    </view>
+  </view>
+</view>

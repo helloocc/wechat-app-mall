@@ -1,0 +1,183 @@
+<view>
+  <view class="form-list">
+
+    <!-- 选择城市 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">
+          选择城市
+        </van-col>
+        <van-col span="18" class="form-value">
+          <picker name="city" mode="selector" range-key="name" value="{{cityIndex}}" range="{{cityList}}" bindchange="onChangeCity" disabled="{{edit}}">
+            <text class="picker input">
+              <text>{{cityList[cityIndex].name || '请选择'}}</text>
+            </text>
+            <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+          </picker>
+        </van-col>
+      </van-row>
+    </view>
+
+     <!-- 演出地点 -->
+     <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">演出地点</van-col>
+        <van-col span="18" class="form-value ta-left">
+          <input type="text" name="place" data-name="site" bindinput="handleInput" value="{{form.site}}" placeholder-class="placeholder" placeholder="填写演出地点" maxlength="199" disabled="{{edit}}" />
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 演出日期 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">
+          演出日期
+        </van-col>
+        <van-col span="18" class="form-value">
+          <picker name="date" mode="date" value="{{form.showDate}}" start="2024-01-01" end="2027-01-01" bindchange="onDateChange" disabled="{{edit}}">
+            <view class="picker">
+              <block wx:if="{{form.showDate == ''}}">
+                <view class="input placeholder">请选择</view>
+              </block>
+              <block wx:else>
+                <view class="input">{{form.showDate}}</view>
+              </block>
+              <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+            </view>
+          </picker>
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 演出时间 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">演出时间</van-col>
+        <van-col span="18" class="form-value">
+          <picker name="time" mode="time" value="{{form.showTime}}" bindchange="onTimeChange" disabled="{{edit}}">
+            <view class="picker">
+              <block wx:if="{{form.showTime == ''}}">
+                <view class="input placeholder">请选择 </view>
+              </block>
+              <block wx:else>
+                <view class="input">{{form.showTime}}</view>
+              </block>
+              <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+            </view>
+          </picker>
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 出票内容 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">出票内容</van-col>
+        <van-col span="18" class="form-value">
+          <textarea name="description" class="form-description" data-name="description" bindinput="handleInput" value="{{form.description}}" placeholder="请填写出票相关信息" placeholder-class="placeholder" auto-focus></textarea>
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 出票数量 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">出票数量</van-col>
+        <van-col span="18" class="form-value">
+          <view class="pr-sm">
+            <image class="number-icon" src="../../../icons/jian.svg" wx:if="{{form.count === 1}}"></image>
+            <image class="number-icon" src="../../../icons/minus.svg" wx:else bindtap="handleMinusNum"></image>
+            <text class="number-text">{{form.count}}</text>
+            <image class="number-icon" src="../../../icons/jia.svg" bindtap="handleAddNum"></image>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 出票价格 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">出票单价</van-col>
+        <van-col span="18" class="form-value ta-left">
+          <view class="flex-right mr-sm">
+            <input type="digit" name="price" data-name="price" bindinput="handleInput" value="{{form.price}}" placeholder-class="placeholder" placeholder="请输入出票价格" maxlength="5" />
+            <text class='price-text'>元 /张</text>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 联系方式 -->
+    <view class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">联系方式</van-col>
+        <van-col span="18" class="form-value ta-left">
+          <input type="text" name="contact" data-name="contact_info" value="{{form.contact_info}}" placeholder-class="placeholder" placeholder="个人信息中可设置默认微信号" maxlength="50" bindinput="handleInput" />
+        </van-col>
+      </van-row>
+    </view>
+
+    <!-- 出票状态 -->
+    <view wx:if="{{edit}}" class="form-item">
+      <van-row gutter="20">
+        <van-col span="6" class="form-label">
+          出票状态
+        </van-col>
+        <van-col span="18" class="form-value">
+          <picker name="status" mode="selector" value="{{statusIndex}}" range="{{statusList}}" bindchange="onChangeStatus">
+            <text class="picker input">
+              <text>{{statusList[statusIndex] || '请选择'}}</text>
+            </text>
+            <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+          </picker>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+  <button class="submit-btn" bindtap='{{ edit ? "handleSubmitEdit" : "handleClickShowConfirm" }}'> {{ edit ? "修改出票" : "立即发布" }}</button>
+</view>
+<van-overlay show="{{ showConfirm }}" z-index="100">
+  <view class="confirm-box">
+    <view class="commit-box">
+      <view>
+        <view class="commit-title">我承诺</view>
+        <text class="commit-text">{{commitText[0]}}</text>
+      </view>
+      <view class="commit-icon" data-index="0" bindtap="handleClickPromise">
+        <image wx:if="{{commitList[0]}}" src="../../../icons/xuanze2.svg"></image>
+        <image wx:else src="../../../icons/xuanze1.svg"></image>
+      </view>
+    </view>
+    <view class="commit-box">
+      <view>
+        <view class="commit-title">我知晓</view>
+        <text class="commit-text">{{commitText[1]}}</text>
+      </view>
+      <view class="commit-icon" data-index="1" bindtap="handleClickPromise">
+        <image wx:if="{{commitList[1]}}" src="../../../icons/xuanze2.svg"></image>
+        <image wx:else src="../../../icons/xuanze1.svg"></image>
+      </view>
+    </view>
+    <!-- <view class="commit-box commit-last">
+      <van-row>
+        <van-col span="18">
+          <view class="commit-title">我承诺</view>
+          <text>{{commitText[2]}}</text>
+        </van-col>
+        <van-col span="6" class="commit-icon" data-index="2" bindtap="handleClickPromise">
+          <image wx:if="{{commitList[2]}}" src="../../../icons/xuanze2.svg"></image>
+          <image wx:else src="../../../icons/xuanze1.svg"></image>
+        </van-col>
+      </van-row>
+    </view> -->
+    <van-row gutter="16">
+      <van-col span="12">
+        <button class="commit-cancel-btn" bindtap="handleClickHideConfirm">取消</button>
+      </van-col>
+      <van-col span="12">
+        <button class='{{ confirmDisable ? "commit-submit-btn disable-btn" : "commit-submit-btn" }}' bindtap='{{ edit ? "handleSubmitEdit" : "handleSubmitPublish"}}'>确认</button>
+      </van-col>
+    </van-row>
+  </view>
+</van-overlay>

@@ -1,0 +1,36 @@
+<view id="page">
+  <view class="header-box">
+    <view class="detail-bg">
+      <view wx:if="{{siteInfo.logo}}">
+        <image src="{{siteInfo.logo}}"></image>
+      </view>
+      <view wx:else="">
+        <image src="../../images/logo.png"></image>
+      </view>
+    </view>
+    <view class="detail-box" style="{{siteInfo.room_key ?'margin-top:0px':'margin-top:20px'}}">
+      <view class="detail-title">{{siteInfo.city}}-{{siteInfo.owner}}</view>
+      <view class="detail-site">
+        <image src="../../../icons/dizhi2.svg"></image>{{siteInfo.location || "暂无"}}
+      </view>
+      <view wx:if="{{siteInfo.room_key}}">
+        <button class="join-room" bindtap='goSiteQrCode'>加入场地群</button>
+      </view>
+    </view>
+    <view class="detail-desc">简介： {{siteInfo.description || "暂无"}} </view>
+    <!-- <view wx:if="{{siteInfo.room_key}}">
+      <view class="detail-desc">加入场地群，添加小助手发送：#加群：{{siteInfo.room_key}}</view>
+    </view> -->
+  </view>
+  <tabs className="month-header" items="{{ showData }}" current="{{ current }}" bind:change="onChangeMonth" scrollMode="center" tabActiveClassName="active" tabClassName="month-header-item" style="height:42px">
+    <view slot="title" slot-scope="item" className="month-header-item"></view>
+  </tabs>
+  <scroll-view id="scroll-view" bind:scroll="onScroll" onTouchStart="onTouchStart" scroll-top="{{ scrollTop }}" scroll-y="{{ true }}" scroll-with-animation="{{ true }}" scroll-animation-duration="{{ 300 }}">
+    <view wx:for="{{showData}}" wx:for-item="monthData" wx:key="month" key="{{month}}" class="showMonth" id="{{'month-'+ monthData.month}}">
+      <view wx:for="{{monthData.month_show}}" wx:key="id" wx:for-item="show">
+        <liveshow-item isDetail value="{{show}}" expand="{{show.id == expandShowId}}" bind:select="handleSelectLiveItem"></liveshow-item>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="goLiveshow" bindtap='goLiveshow'>点击查看更多演出资讯 >></view>
+</view>

@@ -1,0 +1,152 @@
+import moment from "moment";
+import { API_TICKET } from "../../../utils/api";
+import { debounce, getWeek } from "../../../utils/util";
+import { userInfo } from "../../../utils/userInfo";
+import {
+  PAGE_TICKETS_DETAILS,
+  PAGE_TICKETS_INFO,
+  PAGE_TICKETS_LIVESHOW,
+} from "../../../utils/page";
+import { getData } from "../../../utils/request";
+
+const statusList = [
+  {
+    cn: "出票中",
+    icon: "/icons/chupiaozhong.svg",
+  },
+  {
+    cn: "已出票",
+    icon: "/icons/yichupiao.svg",
+  },
+  {
+    cn: "已关闭",
+    icon: "/icons/yiguanbi.svg",
+  },
+];
+
+Page({
+  data: {
+    tickets: [],
+    keyword: "",
+    page: 1,
+    pageSize: 10,
+    maxPage: 0,
+    scrollTop: 0,
+  },
+
+  onShow() {
+    this.onSearch(this.data.keyword, this.data.page);
+  },
+
+  onCancel() {
+    wx.showToast({
+      title: "取消搜索",
+    });
+    this.onSearch();
+  },
+
+  gotoTicketPublish() {
+    if (userInfo.checkLogin()) {
+      wx.navigateTo({
+        url: PAGE_TICKETS_LIVESHOW,
+      });
+    }
+  },
+
+  goTicketDetail() {
+    wx.navigateTo({
+      url: PAGE_TICKETS_DETAILS,
+    });
+  },
+
+  goDetail(event: any) {
+    // 详情页未完成，暂时不跳过去
+    return;
+    console.log(event.currentTarget.dataset.ticketId);
+    let ticketId = event.currentTarget.dataset.ticketId;
+    wx.navigateTo({
+      url: PAGE_TICKETS_DETAILS + "?id=" + ticketId,
+    });
+  },
+
+  handleSearch(e: any) {
+    debounce(this.onSearch)(e.detail.value);
+  },
+
+  async onSearch(keyword: string = "", page: number = 1) {
+    console.log(`Ticket search keyword: [${keyword}], load page: ${page}`);
+    if (page == 1) {
+      wx.pageScrollTo({
+        scrollTop: 0,
+      });
+    }
+    const resp = await getData(API_TICKET, {
+      keyword: keyword,
+      page: page,
+      size: this.data.pageSize,
+      user_id: userInfo.getUserInfo().user_id,
+    });
+    console.log(resp.data);
+
+    for (let item of resp.data.items) {
+      let show_time = item.show_time * 1000;
+      let create_time = item.create_time * 1000;
+      item.show_day = moment(show_time).format("MM月DD日");
+      item.create_time = moment(create_time).format("YYYY.MM.DD HH:mm");
+      item.show_time = moment(show_time).format("MM月DD日 HH:mm");
+      item.show_weekday = getWeek(show_time);
+      item.status_icon = statusList.find((s) => s.cn === item.status)?.icon;
+      item.show_tel = item.status != "已出票";
+    }
+    const maxPage =
+      resp.data.total > this.data.pageSize
+        ? ~~(resp.data.total / this.data.pageSize) + 1
+        : 1;
+
+    let tickets = resp.data.items;
+    if (page > 1) {
+      tickets = this.data.tickets.concat(resp.data.items);
+    }
+    this.setData({
+      tickets: tickets,
+      page: page,
+      maxPage: maxPage,
+      keyword: keyword,
+    });
+  },
+
+  scrollToLower() {
+    if (this.data.page < this.data.maxPage) {
+      this.onSearch(this.data.keyword, this.data.page + 1);
+    }
+  },
+
+  onReachBottom() {
+    console.log(`Ticket reach bottom, current page: ${this.data.page}`);
+    if (this.data.page < this.data.maxPage) {
+      this.onSearch(this.data.keyword, this.data.page + 1);
+    }
+  },
+
+  onHide() {},
+  onUnload() {},
+
+  onPullDownRefresh() {
+    this.onSearch(this.data.keyword);
+    wx.stopPullDownRefresh();
+  },
+
+  onShareAppMessage() {
+    return {
+      title: "LiveStart出票",
+      path: PAGE_TICKETS_INFO,
+    };
+  },
+
+  onShareTimeline() {
+    return {
+      title: "LiveStart出票",
+      path: PAGE_TICKETS_INFO,
+    };
+  },
+});

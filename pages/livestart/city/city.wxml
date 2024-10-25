@@ -1,0 +1,3 @@
+<view class='city-container'>
+  <tags-pannel labels="{{cities}}" active-label-id="{{cityId}}" bind:tagtap="onTagTap" />
+</view>

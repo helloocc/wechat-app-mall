@@ -1,0 +1,16 @@
+
+
+.tab-active {
+  color: #62B28F !important;
+}
+
+.tab-line {
+  background-color: #62B28F !important;
+}
+
+.no-collect {
+  color: #999999;
+  font-size: 28rpx;
+  text-align: center;
+  padding-top: 200rpx;
+}

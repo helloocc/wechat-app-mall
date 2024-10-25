@@ -1,0 +1,45 @@
+/**数字加减器详细样式表**/
+.Add_Sub{
+  position:absolute;
+  width:160rpx;
+  right: 20rpx;
+  height:60rpx;
+  top:20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Goods_Num{
+  position: absolute;
+  left: 53rpx;
+  width: 60rpx;
+  text-align: center;
+}
+
+.subtractor{
+  position: absolute;
+  top:10%;
+  left:0%;
+  width:36rpx;
+  height: 36rpx;
+  border-radius: 50px;
+  color:#999997;
+  z-index: 99999;
+}
+.adder{
+  position: absolute;
+  top:10%;
+  right:0%;
+  width:36rpx;
+  height: 36rpx;
+  color:#fff;
+  border-radius: 50px;
+  z-index: 99999;
+}
+.Add_Sub_logo{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0%;
+  left:0%;
+}

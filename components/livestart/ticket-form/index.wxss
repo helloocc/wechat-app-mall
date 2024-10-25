@@ -1,0 +1,150 @@
+@import '../../app.wxss';
+
+.form-list {
+  color: #333;
+  font-size: 30rpx;
+  padding: 34rpx 24rpx 80rpx;
+}
+
+.form-label {
+  color: #666;
+}
+
+.form-item {
+  padding: 8rpx 32rpx;
+  border: 1px solid #eee;
+  margin-bottom: 20rpx;
+  line-height: 56rpx;
+  border-radius: 40rpx;
+}
+
+.placeholder {
+  font-size: 28rpx !important;
+  color: rgb(145, 145, 145, 0.5) !important;
+}
+
+.form-value {
+  /* flex: 1; */
+  height: 60rpx;
+  text-align: right;
+}
+.picker .input {
+  width: 60%;
+  display: inline-block;
+}
+input,
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  padding: 0 15rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: right;
+}
+.ta-left {
+  text-align: left;
+}
+
+.form-description {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  height: 200rpx !important;
+  padding: 15rpx;
+  text-align: left;
+}
+
+.submit-btn {
+  background-color: #62B28F;
+  width: 380rpx;
+  height: 88rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 88rpx;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  padding: 0;
+  box-shadow: rgba(98, 178, 143, 0.4) 0px 4px 8px;
+}
+
+.number-icon {
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.number-text {
+  width: 80rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+
+.price-text{
+  width: 100rpx;
+}
+
+.confirm-box {
+  margin: 30% 14% 0;
+  background-image: linear-gradient(129deg, #D3F6E7 0%, #F6FAED 49%, #FFFFFF 82%);
+  border-radius: 20px;
+  padding: 40rpx 30rpx;
+}
+
+.commit-box {
+  border: 1px solid #E5E5E5;
+  border-radius: 13px;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 22rpx;
+  color: #666;
+  line-height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.commit-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 12rpx;
+}
+.commit-text {
+  font-size: 22rpx;
+}
+
+.commit-icon {
+  padding: 0 12rpx;
+}
+.commit-icon image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.commit-last {
+  margin-bottom: 60rpx;
+}
+.commit-cancel-btn {
+  background: #FFFFFF;
+  border: 2rpx solid #62B28F;
+  border-radius: 32rpx;
+  font-size: 30rpx;
+  color: #62B28F;
+  height: 64rpx;
+  line-height: 60rpx;
+}
+.commit-submit-btn {
+  background: #62B28F;
+  border-radius: 32rpx;
+  font-size: 30rpx;
+  color: #fff;
+  height: 64rpx;
+  line-height: 62rpx;
+}
+.disable-btn {
+  background: #A2D1BC;
+}

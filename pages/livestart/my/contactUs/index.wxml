@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="contactInfo">
+    <view class="green">
+      <view class="qrcode-bg">
+        <image src="../../../icons/bg.svg"></image>
+      </view>
+      <view class="qrcode-container">
+        <view class="qrcode">
+          <image src="../../../images/livetour_advise.png" mode="aspectFit" show-menu-by-longpress="true" binderror="noBot"></image>
+        </view>
+        <view class="divider-xl"></view>
+        <view class="qrcode">
+          <image src="../../../images/livestart_coop.png" mode="aspectFit" show-menu-by-longpress="true" binderror="noGroup"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
