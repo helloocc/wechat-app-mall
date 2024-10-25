@@ -95,7 +95,6 @@ module.exports =
 /* eslint-disable */
 // 小程序开发api接口工具包，https://github.com/gooking/wxapi
 var API_BASE_URL = 'https://api.it120.cc';
-// var API_BASE_URL = 'http://127.0.0.1:8081';
 var subDomain = '-';
 var merchantId = '0';
 
@@ -255,6 +254,9 @@ module.exports = {
   },
   scoreRankBydate: function scoreRankBydate(data) {
     return request('/score/rankBydate', true, 'get', data);
+  },
+  scoreMyStatistics: function scoreMyStatistics(data) {
+    return request('/score/myStatistics', true, 'get', data);
   },
   scoreTaskList: function scoreTaskList(token) {
     return request('/score/taskList', true, 'get', { token: token });
@@ -731,6 +733,9 @@ module.exports = {
   couponsShareFetch: function couponsShareFetch(token, id, shareToken) {
     return request('/discounts/share/fetch', true, 'post', { token: token, id: id, shareToken: shareToken });
   },
+  couponsHX: function couponsHX(data) {
+    return request('/discounts/hx', true, 'post', data);
+  },
   noticeList: function noticeList(data) {
     return request('/notice/list', true, 'post', data);
   },
@@ -966,6 +971,9 @@ module.exports = {
       token: token
     });
   },
+  orderCloseV2: function orderCloseV2(data) {
+    return request('/order/close', true, 'post', data);
+  },
   orderDelete: function orderDelete(token, orderId) {
     return request('/order/delete', true, 'post', {
       orderId: orderId,
@@ -1058,29 +1066,29 @@ module.exports = {
   regionSearch: function regionSearch(data) {
     return request('/common/region/v2/search', false, 'post', data);
   },
-  provinceV2: () => {
-    return request('https://common.apifm.com/' + subDomain + '/region/province', false, 'get')
+  provinceV2: function provinceV2() {
+    return request('https://common.apifm.com/' + subDomain + '/region/province', false, 'get');
   },
-  cityV2: () => {
-    return request('https://common.apifm.com/' + subDomain + '/region/city', false, 'get')
+  cityV2: function cityV2() {
+    return request('https://common.apifm.com/' + subDomain + '/region/city', false, 'get');
   },
-  districtsV2: data => {
-    return request('https://common.apifm.com/' + subDomain + '/region/districts', false, 'post', data)
+  districtsV2: function districtsV2(data) {
+    return request('https://common.apifm.com/' + subDomain + '/region/districts', false, 'post', data);
   },
-  streetsV2: data => {
-    return request('https://common.apifm.com/' + subDomain + '/region/streets', false, 'post', data)
+  streetsV2: function streetsV2(data) {
+    return request('https://common.apifm.com/' + subDomain + '/region/streets', false, 'post', data);
   },
-  nextRegionV2: pid => {
-    return request('https://common.apifm.com/' + subDomain + '/region/child', false, 'get', { pid })
+  nextRegionV2: function nextRegionV2(pid) {
+    return request('https://common.apifm.com/' + subDomain + '/region/child', false, 'get', { pid: pid });
   },
-  regionInfoV2: id => {
-    return request('https://common.apifm.com/' + subDomain + '/region/info', false, 'get', { id })
+  regionInfoV2: function regionInfoV2(id) {
+    return request('https://common.apifm.com/' + subDomain + '/region/info', false, 'get', { id: id });
   },
-  regionInfoBatchV2: ids => {
-    return request('https://common.apifm.com/' + subDomain + '/region/infoBatch', false, 'get', { ids })
+  regionInfoBatchV2: function regionInfoBatchV2(ids) {
+    return request('https://common.apifm.com/' + subDomain + '/region/infoBatch', false, 'get', { ids: ids });
   },
-  regionSearchV2: data => {
-    return request('https://common.apifm.com/' + subDomain + '/region/search', false, 'post', data)
+  regionSearchV2: function regionSearchV2(data) {
+    return request('https://common.apifm.com/' + subDomain + '/region/search', false, 'post', data);
   },
   cashLogs: function cashLogs(data) {
     return request('/user/cashLog', true, 'post', data);
@@ -1347,6 +1355,9 @@ module.exports = {
   cmsTags: function cmsTags() {
     return request('/cms/tags/list', true, 'get', {});
   },
+  cmsTagsV2: function cmsTagsV2(data) {
+    return request('https://cms.apifm.com/' + merchantId + '/newsTag/list', true, 'post', data);
+  },
   cmsNewsSignUsers: function cmsNewsSignUsers(data) {
     return request('/newsSign/signUsers', true, 'post', data);
   },
@@ -1608,6 +1619,9 @@ module.exports = {
   loginout: function loginout(token) {
     return request('/user/loginout', true, 'get', { token: token });
   },
+  userLogedList: function userLogedList(token) {
+    return request('/user/logedUserList', true, 'get', { token: token });
+  },
   userDelete: function userDelete(token) {
     return request('/user/delete', true, 'post', { token: token });
   },
@@ -1731,10 +1745,16 @@ module.exports = {
       token: token, joinId: joinId, extJsonStr: extJsonStr
     });
   },
+  yuyueLike: function yuyueLike(data) {
+    return request('/yuyue/like', true, 'post', data);
+  },
   yuyueJoinDelete: function yuyueJoinDelete(token, joinId) {
     return request('/yuyue/delJoin', true, 'post', {
       token: token, id: joinId
     });
+  },
+  yuyueServered: function yuyueServered(data) {
+    return request('/yuyue/servered', true, 'post', data);
   },
   yuyueMyJoinInfo: function yuyueMyJoinInfo(token, joinId) {
     return request('/yuyue/join/info', true, 'post', {
@@ -1753,7 +1773,7 @@ module.exports = {
   yuyueTeamMembers: function yuyueTeamMembers(data) {
     return request('/yuyue/info/team/members', true, 'post', data);
   },
-  yuyueTeamDeleteMember: function yuyueTeamDeleteMember(token, joinId) {
+  yuyueTeamDeleteMember: function yuyueTeamDeleteMember(data) {
     return request('/yuyue/info/team/members/del', true, 'post', data);
   },
   register_email: function register_email(data) {
@@ -1880,9 +1900,6 @@ module.exports = {
     return request('/peisong/member/change-work-status', true, 'post', {
       token: token
     });
-  },
-  peisongMemberStatistics: (data) => {
-    return request('/peisong/member/statistics', true, 'post', data)
   },
   peisongOrdersGrabbing: function peisongOrdersGrabbing(token) {
     return request('/peisong/order/grabbing', true, 'get', { token: token });
@@ -2174,106 +2191,105 @@ module.exports = {
     return request('/userBank/unbind', true, 'post', { token: token });
   },
   // 京东VOP相关接口
-  // 京东VOP相关接口
-  jdvopGoodsList: data => {
-    return request(`/jdvop/${merchantId}/goods/list`, false, 'post', data)
+  jdvopGoodsList: function jdvopGoodsList(data) {
+    return request('/jdvop/' + merchantId + '/goods/list', false, 'post', data);
   },
-  jdvopGoodsListV2: data => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/goods/list`, false, 'post', data)
+  jdvopGoodsListV2: function jdvopGoodsListV2(data) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/goods/list', false, 'post', data);
   },
-  jdvopGoodsCheckCanBuy: data => {
-    return request(`/jdvop/${merchantId}/goods/checkCanBuy`, false, 'post', data)
+  jdvopGoodsCheckCanBuy: function jdvopGoodsCheckCanBuy(data) {
+    return request('/jdvop/' + merchantId + '/goods/checkCanBuy', false, 'post', data);
   },
-  jdvopGoodsCheckCanBuyV2: data => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/goods/checkCanBuy`, false, 'post', data)
+  jdvopGoodsCheckCanBuyV2: function jdvopGoodsCheckCanBuyV2(data) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/goods/checkCanBuy', false, 'post', data);
   },
-  jdvopGoodsDetail: goodsId => {
-    return request(`/jdvop/${merchantId}/goods/detail`, false, 'get', {
+  jdvopGoodsDetail: function jdvopGoodsDetail(goodsId) {
+    return request('/jdvop/' + merchantId + '/goods/detail', false, 'get', {
       skuId: goodsId,
       queryExts: 'wxintroduction'
-    })
+    });
   },
-  jdvopGoodsDetailV2: goodsId => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/goods/detail`, false, 'get', {
+  jdvopGoodsDetailV2: function jdvopGoodsDetailV2(goodsId) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/goods/detail', false, 'get', {
       skuId: goodsId,
       queryExts: 'wxintroduction'
-    })
+    });
   },
-  jdvopGoodsSkuImages: goodsId => {
-    return request(`/jdvop/${merchantId}/goods/skuImages`, false, 'get', {
+  jdvopGoodsSkuImages: function jdvopGoodsSkuImages(goodsId) {
+    return request('/jdvop/' + merchantId + '/goods/skuImages', false, 'get', {
       skuId: goodsId
-    })
+    });
   },
-  jdvopGoodsSkuImagesV2: goodsId => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/goods/skuImages`, false, 'get', {
+  jdvopGoodsSkuImagesV2: function jdvopGoodsSkuImagesV2(goodsId) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/goods/skuImages', false, 'get', {
       skuId: goodsId
-    })
+    });
   },
-  jdvopCartInfo: token => {
-    return request(`/jdvop/${merchantId}/shopping-cart/info`, false, 'get', {
-      token
-    })
+  jdvopCartInfo: function jdvopCartInfo(token) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/info', false, 'get', {
+      token: token
+    });
   },
-  jdvopCartAdd: data => {
-    return request(`/jdvop/${merchantId}/shopping-cart/add`, false, 'post', data)
+  jdvopCartAdd: function jdvopCartAdd(data) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/add', false, 'post', data);
   },
-  jdvopCartModifyNumber: (token, key, number) => {
-    return request(`/jdvop/${merchantId}/shopping-cart/modifyNumber`, false, 'post', {
-      token, key, number
-    })
+  jdvopCartModifyNumber: function jdvopCartModifyNumber(token, key, number) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/modifyNumber', false, 'post', {
+      token: token, key: key, number: number
+    });
   },
-  jdvopCartSelect: (token, key, selected) => {
-    return request(`/jdvop/${merchantId}/shopping-cart/select`, false, 'post', {
-      token, key, selected
-    })
+  jdvopCartSelect: function jdvopCartSelect(token, key, selected) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/select', false, 'post', {
+      token: token, key: key, selected: selected
+    });
   },
-  jdvopCartRemove: (token, key) => {
-    return request(`/jdvop/${merchantId}/shopping-cart/remove`, false, 'post', {
-      token, key
-    })
+  jdvopCartRemove: function jdvopCartRemove(token, key) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/remove', false, 'post', {
+      token: token, key: key
+    });
   },
-  jdvopCartEmpty: token => {
-    return request(`/jdvop/${merchantId}/shopping-cart/empty`, false, 'post', {
-      token
-    })
+  jdvopCartEmpty: function jdvopCartEmpty(token) {
+    return request('/jdvop/' + merchantId + '/shopping-cart/empty', false, 'post', {
+      token: token
+    });
   },
-  jdvopCartInfoV2: token => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/info`, false, 'get', {
-      token
-    })
+  jdvopCartInfoV2: function jdvopCartInfoV2(token) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/info', false, 'get', {
+      token: token
+    });
   },
-  jdvopCartAddV2: data => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/add`, false, 'post', data)
+  jdvopCartAddV2: function jdvopCartAddV2(data) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/add', false, 'post', data);
   },
-  jdvopCartModifyNumberV2: (token, key, number) => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/modifyNumber`, false, 'post', {
-      token, key, number
-    })
+  jdvopCartModifyNumberV2: function jdvopCartModifyNumberV2(token, key, number) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/modifyNumber', false, 'post', {
+      token: token, key: key, number: number
+    });
   },
-  jdvopCartSelectV2: (token, key, selected) => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/select`, false, 'post', {
-      token, key, selected
-    })
+  jdvopCartSelectV2: function jdvopCartSelectV2(token, key, selected) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/select', false, 'post', {
+      token: token, key: key, selected: selected
+    });
   },
-  jdvopCartRemoveV2: (token, key) => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/remove`, false, 'post', {
-      token, key
-    })
+  jdvopCartRemoveV2: function jdvopCartRemoveV2(token, key) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/remove', false, 'post', {
+      token: token, key: key
+    });
   },
-  jdvopCartEmptyV2: token => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/shopping-cart/empty`, false, 'post', {
-      token
-    })
+  jdvopCartEmptyV2: function jdvopCartEmptyV2(token) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/shopping-cart/empty', false, 'post', {
+      token: token
+    });
   },
-  jdvopCategory: pid => {
-    return request(`https://jdvop.apifm.com/jdvop/${merchantId}/category/list`, false, 'get', {
-      pid
-    })
+  jdvopCategory: function jdvopCategory(pid) {
+    return request('https://jdvop.apifm.com/jdvop/' + merchantId + '/category/list', false, 'get', {
+      pid: pid
+    });
   },
-  jdvopCategory46: pid => {
-    return request(`https://jdvop.apifm.com/jdvop/46/category/list`, false, 'get', {
-      pid
-    })
+  jdvopCategory46: function jdvopCategory46(pid) {
+    return request('https://jdvop.apifm.com/jdvop/46/category/list', false, 'get', {
+      pid: pid
+    });
   },
   // 商家从区管进货
   jdvopJinhuoGoods: function jdvopJinhuoGoods(data) {
@@ -2451,6 +2467,19 @@ module.exports = {
   jicunGoodsDetail: function jicunGoodsDetail(data) {
     return request('/jicunGoods/detail', true, 'get', data);
   },
+  // stripe
+  stripeAddCard: function stripeAddCard(data) {
+    return request('/pay/stripe/addCard', true, 'post', data);
+  },
+  stripeCardList: function stripeCardList(token) {
+    return request('/pay/stripe/cardList', true, 'get', { token: token });
+  },
+  stripeDelCard: function stripeDelCard(token, cardId) {
+    return request('/pay/stripe/deleteCard', true, 'post', { token: token, cardId: cardId });
+  },
+  stripeCharge: function stripeCharge(data) {
+    return request('/pay/stripe/charge', true, 'post', data);
+  },
   // ocr
   ocrBusinessLicense: function ocrBusinessLicense(imageUrl) {
     return request('/ocr/businessLicense', true, 'post', { imageUrl: imageUrl });
@@ -2543,6 +2572,12 @@ module.exports = {
   },
   tempDataGet: function tempDataGet(key) {
     return request('/tempData/get', true, 'get', { key: key });
+  },
+  tempDataSetV2: function tempDataSetV2(key, content) {
+    return request('https://common.apifm.com/' + merchantId + '/tempData/set', true, 'post', { key: key, content: content });
+  },
+  tempDataGetV2: function tempDataGetV2(key) {
+    return request('https://common.apifm.com/' + merchantId + '/tempData/get', true, 'get', { key: key });
   },
   commonDatetime: function commonDatetime() {
     return request('/common/datetime', true, 'get');
