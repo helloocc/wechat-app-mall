@@ -1,4 +1,4 @@
-import { PAGE_CONTACT_US } from "../../../utils/page";
+import { PAGE_CONTACT_US } from "../../../../utils/livestart/page";
 
 Page({
   data: {},

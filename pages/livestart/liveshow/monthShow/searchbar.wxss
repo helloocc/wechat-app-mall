@@ -1,0 +1,34 @@
+.search-container-sticky {
+  position: sticky;
+  top: 60rpx;
+  z-index: 100;
+}
+
+.search-container {
+  height: 60rpx;
+  padding: 20rpx 24rpx;
+  background-color: #fff;
+
+  display: flex;
+  gap: 16rpx;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px !important;
+}
+
+.searchbar {
+  border: 1px solid rgb(78, 163, 122);
+  border-radius: 53rpx;
+  height: 56rpx;
+  padding-right: 12rpx;
+  flex-grow: 1;
+}
+
+.ant-input-placeholder,
+.searchbar-input-placeholder {
+  font-size: 28rpx !important;
+}
+.ant-input-content {
+  font-size: 28rpx !important;
+}

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "select-city": "/components/select-city/index"
+    "select-city": "/components/livestart/select-city/index"
   },
   "navigationBarBackgroundColor": "#62B28F",
   "navigationBarTextStyle": "white",

@@ -1,10 +1,11 @@
 <!--components/select-city/index.wxml-->
 <view class="city-container">
   <picker style="display: inline-block;" mode="selector" range-key="name" value="{{cityIndex}}" range="{{cityList}}" bindchange="onSelectCity">
-    <image wx:if="{{type === 'default'}}" class="city-icon" src="../../../icons/dizhi.svg"></image>
-    <image wx:if="{{type === 'white'}}" class="city-icon" src="../../../icons/address_white.svg"></image>
+  <view>
     <text class="picker">
       <text class="{{ 'city-name color-' + type }}">{{cityList[cityIndex].name}}</text>
     </text>
+    <ant-icon style="font-size: 12px;margin-left: 2rpx;" type="DownOutline"></ant-icon>
+  </view>
   </picker>
 </view>

@@ -1,6 +1,6 @@
 
-@import '../../tickets/info/index.wxss';
-@import '../../../components/review/review.wxss';
+@import '../info/index.wxss';
+@import '../../../../components/livestart/review/review.wxss';
 .containerTxt{
   margin:20rpx ;
   background-color: rgba(237, 242, 238, 1);

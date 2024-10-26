@@ -1,7 +1,10 @@
-import { PAGE_LIVESHOW, PAGE_LIVESHOW_SEARCH } from "../../../utils/page";
-import { SHARE_TITILE } from "../../../utils/const";
-import { loadLiveshow } from "../../../utils/global";
-import { debounce } from "../../../utils/util";
+import {
+  PAGE_LIVESHOW,
+  PAGE_LIVESHOW_SEARCH,
+} from "../../../../utils/livestart/page";
+import { SHARE_TITILE } from "../../../../utils/livestart/const";
+import { loadLiveshow } from "../../../../utils/livestart/global";
+import { debounce } from "../../../../utils/livestart/util";
 
 const historyStoreKey = "search-history";
 
@@ -48,23 +51,23 @@ Page({
   },
 
   // 搜索
-  onSearch(e: any) {
-    if (e.detail.value === "") {
+  doSearch(ctx, value: string) {
+    if (value === "") {
       // 手动清空了搜索框
-      this.setData({
+      ctx.setData({
         search: "",
         showData: [],
       });
       return;
     }
-    const history = [e.detail.value, ...this.data.searchHistory];
+    const history = [value, ...ctx.data.searchHistory];
     // 保存最近 10 个搜索历史
     wx.setStorageSync(historyStoreKey, history.slice(0, 10));
-    this.loadShow(e.detail.value);
+    ctx.loadShow(value);
   },
 
-  handleSearch(e: any) {
-    debounce(this.onSearch)(e);
+  onSearchInputChange(e: any) {
+    debounce(this.doSearch, 500)(this, e.detail);
   },
 
   // 点击一个搜索历史，再次进行搜索
@@ -108,11 +111,13 @@ Page({
     });
   },
 
-  async loadShow(search: string) {
+  loadShow(search: string) {
+    wx.showLoading({ title: '搜索中' })
     // const city = await getCurrentCity();
     const searchHistory = (wx.getStorageSync(historyStoreKey) as []) || [];
     loadLiveshow("", search, true, (data) => {
       this.setData({ search: search, showData: data, searchHistory });
+      wx.hideLoading()
     });
   },
 

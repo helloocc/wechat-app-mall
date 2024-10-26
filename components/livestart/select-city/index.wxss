@@ -10,19 +10,3 @@
   line-height: 60rpx;
 }
 
-.city-line {
-  font-size: 26rpx;
-  color: #ccc;
-  /* margin-right: 16rpx; */
-}
-
-.city-icon {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 12rpx;
-  vertical-align: middle;
-}
-
-.color-white {
-  color: #fff;
-}

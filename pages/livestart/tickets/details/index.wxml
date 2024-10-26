@@ -1,4 +1,4 @@
-<import src="../../components/review/review.wxml"/>
+<import src="../components/review/review.wxml"/>
 <view class="menuList" wx:if="{{ showMenu}}">
     <ul class="ul-list">
     <li>分享</li>

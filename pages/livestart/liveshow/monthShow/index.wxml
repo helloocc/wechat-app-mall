@@ -1,12 +1,12 @@
 <view id="page">
   <noticebar wx:if="{{showNotice}}" closable="{{false}}" bindclose="onCloseNotice">
-    <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../icons/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
+    <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../../icons/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
   </noticebar>
-  <view class="search-container-wrapper bg-white">
-    <view class="search-container">
-      <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bind:tap="gotoSearchShowPage" bg-color="transparent" shape="circle" placeholder="搜索乐队/演出名称/场地" show-cancel="{{false}}" />
-      <select-city bind:select="handleSelectCity" save></select-city>
-    </view>
+  <view class="search-container search-container-sticky">
+    <select-city bind:select="handleSelectCity" save></select-city>
+    <ant-input placeholder="  搜索乐队/演出名称/场地" bind:tap="gotoSearchShowPage" className="searchbar" confirmType="search" placeholder-class="searchbar-input-placeholder">
+      <ant-icon slot="prefix" type="SearchOutline"></ant-icon>
+    </ant-input>
   </view>
 
   <view class="ad-section mt-md" wx:if="{{banners.length > 0}}">
@@ -14,7 +14,7 @@
       <block wx:for="{{banners}}" wx:key="id">
         <!-- <swiper-item class="swiper-item" style="background-image: url({{item.url}})"> -->
         <swiper-item>
-          <image class="swiper-item" src="{{item.url}}" mode="aspectFill" bind:tap="gotoSearchShowPage" data-keyword="{{item.keyword}}" >
+          <image class="swiper-item" src="{{item.url}}" mode="aspectFill" bind:tap="gotoSearchShowPage" data-keyword="{{item.keyword}}">
           </image>
         </swiper-item>
       </block>
@@ -34,7 +34,7 @@
 
   <movable-area class="join-group">
     <movable-view class="join-group-button" direction="vertical" bindtap='goQrCode'>
-      <image class="join-group-button-img" src="../../../icons/jiaqun.svg"></image>
+      <image class="join-group-button-img" src="../../../../icons/jiaqun.svg"></image>
     </movable-view>
   </movable-area>
 </view>

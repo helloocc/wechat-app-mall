@@ -1,7 +1,7 @@
-import * as net from "../../../utils/net";
-import { convertShowViewData } from "../../../utils/global";
-import { API_LIVESHOW } from "../../../utils/api";
-import { PAGE_TICKETS_PUBLISH } from "../../../utils/page";
+import * as net from "../../../../utils/livestart/net";
+import { convertShowViewData } from "../../../../utils/livestart/global";
+import { API_LIVESHOW } from "../../../../utils/livestart/api";
+import { PAGE_TICKETS_PUBLISH } from "../../../../utils/livestart/page";
 
 Page({
 

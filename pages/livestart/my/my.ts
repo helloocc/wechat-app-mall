@@ -16,7 +16,7 @@ Page({
     // userInfo: APP.globalData.userInfo,
     userInfo: {
       nickname: "",
-      avatar: "../../../icons/unlogin.svg",
+      avatar: "../../icons/unlogin.svg",
     },
     isLogin: false,
   },
@@ -43,7 +43,7 @@ Page({
           that.setData({
             userInfo: {
               nickname: "",
-              avatar: "../../../icons/unlogin.svg",
+              avatar: "../../icons/unlogin.svg",
             },
             isLogin: false,
           });

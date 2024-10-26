@@ -2,6 +2,6 @@
     "navigationBarTitleText": "修改出票",
     "enablePullDownRefresh": false,
     "usingComponents": {
-        "ticket-form": "/components/ticket-form/index"
+        "ticket-form": "/components/livestart/ticket-form/index"
     }
 }

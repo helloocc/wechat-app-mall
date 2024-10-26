@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "liveshow-item": "/components/liveshow-item/index"
+    "liveshow-item": "/components/livestart/liveshow-item/index",
+    "ant-input": "antd-mini/Input/index",
+    "ant-icon": "antd-mini/Icon/index"
   },
   "navigationBarTitleText": "演出搜索"
   

@@ -1,9 +1,9 @@
-import * as net from "../../../utils/net";
-import { copy } from "../../../utils/util";
-import { API_ROOM_NAME } from "../../../utils/api";
-import { SHARE_TITILE } from "../../../utils/const";
-import { PAGE_ROOMS_SEARCH } from "../../../utils/page";
-import { debounce } from "../../../utils/util";
+import * as net from "../../../../utils/livestart/net";
+import { copy } from "../../../../utils/livestart/util";
+import { API_ROOM_NAME } from "../../../../utils/livestart/api";
+import { SHARE_TITILE } from "../../../../utils/livestart/const";
+import { PAGE_ROOMS_SEARCH } from "../../../../utils/livestart/page";
+import { debounce } from "../../../../utils/livestart/util";
 
 Page({
   data: {

@@ -3,6 +3,8 @@
     "liveshow-item": "/components/livestart/liveshow-item/index",
     "noticebar": "/components/livestart/noticebar/index",
     "select-city": "/components/livestart/select-city/index",
+    "ant-input": "antd-mini/Input/index",
+    "ant-icon": "antd-mini/Icon/index",
     "tabs": "antd-mini/Tabs/index"
   }
 }

@@ -1,8 +1,18 @@
+@import '../monthShow/searchbar.wxss';
 
 .container {
   width: 100%;
-  padding: 20rpx 24rpx 0 24rpx;
+  padding: 0rpx 24rpx;
   font-family: PingFangSC-Regular;
+  display: flex;
+}
+
+.search-container {
+  width: 100%;
+}
+
+.result-container {
+  width: 100%;
 }
 
 .show-data {
@@ -12,31 +22,9 @@
   background: rgba(255, 255, 255, 1);
 }
 
-.search-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  width: 100%;
-}
-
-.searchbar-input {
-  border: 1px solid rgb(78, 163, 122);
-  margin: 0 auto;
-  border-radius: 53rpx;
-}
-
-.search-container>l-search-bar {
-  width: 100%;
-  padding: 0;
-}
-
 .result-container .no-result {
   text-align: center;
   color: #aaa;
-}
-
-.searchbar {
-  padding: 0 !important;
 }
 
 
@@ -66,9 +54,9 @@
 .history-item .content {
   display: flex;
   justify-content: start;
+  gap: 8rpx;
   align-items: center;
   line-height: 28rpx;
-  width: 80%;
   overflow: hidden;
   white-space: nowrap;
   color: #878787;

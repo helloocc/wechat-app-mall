@@ -1,4 +1,3 @@
-@import '../../app.wxss';
 
 .form-list {
   color: #333;

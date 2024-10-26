@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "noticebar": "/components/noticebar/index",
-    "ticket": "/components/ticket/index"
+    "noticebar": "/components/livestart/noticebar/index",
+    "ticket": "/components/livestart/ticket/index"
   }
 }

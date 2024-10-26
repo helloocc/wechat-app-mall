@@ -15,7 +15,7 @@ Page({
    */
   data: {
     showData: [] as Array<MonthLiveshow>,
-    collectIcon: "../../../icons/shoucang_shouye.png",
+    collectIcon: "../../icons/shoucang_shouye.png",
     city: '',
 
     // 广告位的图片

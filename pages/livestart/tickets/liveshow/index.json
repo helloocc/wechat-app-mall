@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "liveshow-item": "/components/liveshow-item/index",
-    "select-city": "/components/select-city/index"
+    "liveshow-item": "/components/livestart/liveshow-item/index",
+    "select-city": "/components/livestart/select-city/index"
   },
   "navigationBarTitleText": "我要出票"
 }

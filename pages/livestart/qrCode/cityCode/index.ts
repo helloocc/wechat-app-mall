@@ -1,10 +1,10 @@
 // index.ts
 // 获取应用实例
 
-import { API_QRCODE_BOT, API_QRCODE_GROUP } from "../../../utils/api";
-import { SHARE_TITILE, QrCode_DEV } from "../../../utils/const";
-import { PAGE_LIVESHOW,PAGE_CITY_QRCODE } from "../../../utils/page";
-import { APP, getCityId } from "../../../utils/global";
+import { API_QRCODE_BOT, API_QRCODE_GROUP } from "../../../../utils/livestart/api";
+import { SHARE_TITILE, QrCode_DEV } from "../../../../utils/livestart/const";
+import { PAGE_LIVESHOW,PAGE_CITY_QRCODE } from "../../../../utils/livestart/page";
+import { APP, getCityId } from "../../../../utils/livestart/global";
 
 Page({
   data: {

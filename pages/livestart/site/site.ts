@@ -12,7 +12,7 @@ Page({
   data: {
     showData: [] as Array<MonthLiveshow>,
     current: 0,
-    collectIcon: "../../../icons/shoucang_shouye.png",
+    collectIcon: "../../icons/shoucang_shouye.png",
     expandShowId: 0, // 当前对哪个演出 id 进行详情展开。
     scrollTop: 0 as number | undefined, // 竖向滚动位置
     siteInfo: {} as Site,

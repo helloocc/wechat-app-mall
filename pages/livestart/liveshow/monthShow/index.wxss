@@ -1,3 +1,4 @@
+@import './searchbar.wxss';
 
 .notice-content {
   display: flex;
@@ -10,12 +11,12 @@
   margin-bottom: -4rpx;
 }
 
-.sticky-header{
+.sticky-header {
   padding: 0 24rpx;
   width: 702rpx !important;
 }
 
-.sticky-header-fixed{
+.sticky-header-fixed {
   box-shadow: rgba(98, 178, 143, 0.2) 0px 1px 4px;
 }
 
@@ -64,67 +65,9 @@
 }
 /* END movable-area 加群按钮 */
 
-
 /* START 搜索框 */
-.search-container-wrapper {
-  width: 100%;
-  position: sticky;
-  top: 60rpx; /* 应该和 antd-mini/NoticeBar/index.wxss 第4行一样，通知栏的高度 */
-  /* The `top` style will be dynamically set in the HTML `style` attribute.  */
-  /* top: 0; */
-  height: 100rpx;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  background-color: #FFF;
-}
 
-.search-container {
-  margin: 0 24rpx 0rpx 24rpx;
-  padding-right: 24rpx;
-  width: 676rpx;
-  display: flex;
-  border: 1px solid rgb(78, 163, 122);
-  border-radius: 53rpx;
-  height: 60rpx;
-  justify-content: space-between;
-}
-
-.searchbar-container{
-  padding-left: 0rpx !important;
-  height: 60rpx !important;
-}
-
-.searchbar-input {
-  width: 400rpx !important;
-  height: 60rpx !important;
-}
-
-.city-container {
-  display: flex;
-  align-items: center;
-}
-
-.city-name {
-  font-size: 26rpx;
-  line-height: 60rpx;
-}
-
-.city-line {
-  font-size: 26rpx;
-  color: #ccc;
-  margin-right: 16rpx;
-}
-
-.city-icon {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 15rpx;
-  vertical-align: middle;
-}
 /* END 搜索框 */
-
 
 /* month-header START */
 /* 月份电梯样式 */
@@ -137,7 +80,7 @@
   position: sticky;
   /* 理论上精确计算应该是 160rpx，但小程序自动将 rpx 转换成 px 时候会有精度损失（比如 10rpx=5.3px，按照5px算）；*/
   /* 160rpx 会在个别机型上出现 2px 的空白，156rpx 让该元素和上面的搜索出现了 4rpx 的交叉，避免精度损失带来的空白 */
-  top: 156rpx; 
+  top: 156rpx;
   z-index: 100;
   padding: 0 12rpx;
 }

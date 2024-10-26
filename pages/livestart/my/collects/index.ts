@@ -1,7 +1,7 @@
-import { API_FAVOR } from "../../../utils/api";
-import { APP, convertShowViewData } from "../../../utils/global";
-import { userInfo } from "../../../utils/userInfo";
-import * as net from "../../../utils/net";
+import { API_FAVOR } from "../../../../utils/livestart/api";
+import { APP, convertShowViewData } from "../../../../utils/livestart/global";
+import { userInfo } from "../../../../utils/livestart/userInfo";
+import * as net from "../../../../utils/livestart/net";
 Page({
   data: {
     shows: [],

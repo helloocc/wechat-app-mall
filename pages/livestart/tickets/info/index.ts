@@ -1,13 +1,13 @@
-import moment from "moment";
-import { API_TICKET } from "../../../utils/api";
-import { debounce, getWeek } from "../../../utils/util";
-import { userInfo } from "../../../utils/userInfo";
+import { API_TICKET } from "../../../../utils/livestart/api";
+import { debounce, getWeek } from "../../../../utils/livestart/util";
+import { userInfo } from "../../../../utils/livestart/userInfo";
 import {
   PAGE_TICKETS_DETAILS,
   PAGE_TICKETS_INFO,
   PAGE_TICKETS_LIVESHOW,
-} from "../../../utils/page";
-import { getData } from "../../../utils/request";
+} from "../../../../utils/livestart/page";
+import { getData } from "../../../../utils/livestart/request";
+import dayjs from 'dayjs';
 
 const statusList = [
   {
@@ -91,9 +91,9 @@ Page({
     for (let item of resp.data.items) {
       let show_time = item.show_time * 1000;
       let create_time = item.create_time * 1000;
-      item.show_day = moment(show_time).format("MM月DD日");
-      item.create_time = moment(create_time).format("YYYY.MM.DD HH:mm");
-      item.show_time = moment(show_time).format("MM月DD日 HH:mm");
+      item.show_day = dayjs(show_time).format("MM月DD日");
+      item.create_time = dayjs(create_time).format("YYYY.MM.DD HH:mm");
+      item.show_time = dayjs(show_time).format("MM月DD日 HH:mm");
       item.show_weekday = getWeek(show_time);
       item.status_icon = statusList.find((s) => s.cn === item.status)?.icon;
       item.show_tel = item.status != "已出票";

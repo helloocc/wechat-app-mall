@@ -1,4 +1,4 @@
-import { getCityList, setCityId } from "../../../utils/livestart/global";
+import { getCityList, setCityId } from "../../../../utils/livestart/global";
 
 Page({
   data: {

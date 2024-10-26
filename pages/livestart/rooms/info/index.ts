@@ -1,12 +1,12 @@
-import { copy } from "../../../utils/util";
-import { SHARE_TITILE } from "../../../utils/const";
+import { copy } from "../../../../utils/livestart/util";
+import { SHARE_TITILE } from "../../../../utils/livestart/const";
 import {
   PAGE_CITY_QRCODE,
   PAGE_ROOMS,
   PAGE_ROOMS_SEARCH,
-} from "../../../utils/page";
-import { API_TAG_ROOM } from "../../../utils/api";
-import { getData } from "../../../utils/request";
+} from "../../../../utils/livestart/page";
+import { API_TAG_ROOM } from "../../../../utils/livestart/api";
+import { getData } from "../../../../utils/livestart/request";
 
 Page({
   data: {

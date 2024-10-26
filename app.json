@@ -63,7 +63,26 @@
     "pages/notagree/index",
     "pages/my/user-code",
     "pages/raffle/index",
-    "pages/livestart/liveshow/monthShow/index"
+    "pages/livestart/liveshow/monthShow/index",
+    "pages/livestart/liveshow/search/index",
+    "pages/livestart/liveshow/details/index",
+    "pages/livestart/liveshow/ticketsInfo/ticketsInfo",
+    "pages/livestart/my/my",
+    "pages/livestart/my/collects/index",
+    "pages/livestart/my/myTickets/index",
+    "pages/livestart/my/updateUser/index",
+    "pages/livestart/my/contactUs/index",
+    "pages/livestart/rooms/info/index",
+    "pages/livestart/rooms/search/index",
+    "pages/livestart/tickets/info/index",
+    "pages/livestart/tickets/liveshow/index",
+    "pages/livestart/tickets/publish/index",
+    "pages/livestart/tickets/edit/index",
+    "pages/livestart/tickets/details/index",
+    "pages/livestart/system/login/index",
+    "pages/livestart/site/site",
+    "pages/livestart/qrCode/siteCode/index",
+    "pages/livestart/qrCode/cityCode/index"
   ],
   "requiredPrivateInfos": [
     "getLocation",
@@ -127,7 +146,7 @@
         "iconPath": "icons/yanchu_sm.png",
         "selectedIconPath": "icons/yanchu_selected_sm.png",
         "text": "演出"
-      },     
+      },
       {
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home-off.png",
@@ -135,16 +154,16 @@
         "text": "商城"
       },
       {
-        "pagePath": "pages/category/category",
-        "iconPath": "images/nav/fl-off.png",
-        "selectedIconPath": "images/nav/fl-on.png",
-        "text": "分类"
+        "pagePath": "pages/livestart/tickets/info/index",
+        "iconPath": "icons/chupiao_sm.png",
+        "selectedIconPath": "icons/chupiao_selected_sm.png",
+        "text": "出票"
       },
       {
-        "pagePath": "pages/shop-cart/index",
-        "iconPath": "images/nav/cart-off.png",
-        "selectedIconPath": "images/nav/cart-on.png",
-        "text": "购物车"
+        "pagePath": "pages/livestart/my/my",
+        "iconPath": "icons/wode_sm.png",
+        "selectedIconPath": "icons/wode_selected_sm.png",
+        "text": "我的"
       },
       {
         "pagePath": "pages/my/index",

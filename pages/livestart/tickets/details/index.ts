@@ -1,6 +1,7 @@
-import moment from "moment";
-import { getWeek } from "../../../utils/util";
-import * as net from "../../../utils/net";
+import { getWeek } from "../../../../utils/livestart/util";
+import * as net from "../../../../utils/livestart/net";
+import dayjs from 'dayjs';
+
 Page({
   /**
    * 页面的初始数据
@@ -404,8 +405,8 @@ Page({
         for (let item of res.data) {
           let show_time = item.show_time * 1000;
           let create_time = item.create_time * 1000;
-          item.show_day = moment(show_time).format("MM.DD");
-          item.show_time = moment(show_time).format("MM月DD日 HH:mm");
+          item.show_day = dayjs(show_time).format("MM.DD");
+          item.show_time = dayjs(show_time).format("MM月DD日 HH:mm");
           item.show_weekday = getWeek(show_time);
           //  item.is_festival = item.title.includes("音乐节") ? true : false;
           // item.performers = item.performers ? item.performers : item.title;

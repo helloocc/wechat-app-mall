@@ -1,10 +1,10 @@
 
-import * as net from "../../../utils/net";
-import { convertShowViewData } from "../../../utils/global";
-import { userInfo } from "../../../utils/userInfo";
-import { copy } from "../../../utils/util";
-import { PAGE_LIVESHOW_DETAILS, PAGE_SITE } from "../../../utils/page";
-import { API_FAVOR, API_LIVESHOW, API_QRCODE_BOT } from "../../../utils/api";
+import * as net from "../../../../utils/livestart/net";
+import { convertShowViewData } from "../../../../utils/livestart/global";
+import { userInfo } from "../../../../utils/livestart/userInfo";
+import { copy } from "../../../../utils/livestart/util";
+import { PAGE_LIVESHOW_DETAILS, PAGE_SITE } from "../../../../utils/livestart/page";
+import { API_FAVOR, API_LIVESHOW, API_QRCODE_BOT } from "../../../../utils/livestart/api";
 // import { isImageUrl, isPromise } from "miniprogram/miniprogram_npm/@vant/weapp/common/validator";
 
 Page({

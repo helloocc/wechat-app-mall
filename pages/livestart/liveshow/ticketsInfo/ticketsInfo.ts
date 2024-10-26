@@ -1,14 +1,14 @@
-import moment from "moment";
-import { API_TICKET } from "../../../utils/api";
-import { SHARE_TITILE } from "../../../utils/const";
-import { getWeek } from "../../../utils/util";
+import { API_TICKET } from "../../../../utils/livestart/api";
+import { SHARE_TITILE } from "../../../../utils/livestart/const";
+import { getWeek } from "../../../../utils/livestart/util";
 import {
   PAGE_TICKETS_DETAILS,
   PAGE_TICKETS_INFO,
   PAGE_TICKETS_LIVESHOW,
   PAGE_TICKETS_PUBLISH,
-} from "../../../utils/page";
-import * as net from "../../../utils/net";
+} from "../../../../utils/livestart/page";
+import * as net from "../../../../utils/livestart/net";
+import dayjs from "dayjs";
 Page({
   data: {
     tickets: [],
@@ -79,9 +79,9 @@ Page({
       for (let item of res.data) {
         let show_time = item.show_time * 1000;
         let create_time = item.create_time * 1000;
-        item.show_day = moment(show_time).format("MM月DD日");
-        item.create_time = moment(create_time).format("YYYY.MM.DD HH:mm");
-        item.show_time = moment(show_time).format("MM月DD日 HH:mm");
+        item.show_day = dayjs(show_time).format("MM月DD日");
+        item.create_time = dayjs(create_time).format("YYYY.MM.DD HH:mm");
+        item.show_time = dayjs(show_time).format("MM月DD日 HH:mm");
         item.show_weekday = getWeek(show_time);
         item.performers = item.performers ? item.performers : item.title;
       }

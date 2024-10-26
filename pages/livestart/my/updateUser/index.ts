@@ -1,6 +1,6 @@
-import { userInfo } from "../../../utils/userInfo";
-import * as net from "../../../utils/net";
-import { API_USERS } from "../../../utils/api";
+import { userInfo } from "../../../../utils/livestart/userInfo";
+import * as net from "../../../../utils/livestart/net";
+import { API_USERS } from "../../../../utils/livestart/api";
 
 Page({
   /**

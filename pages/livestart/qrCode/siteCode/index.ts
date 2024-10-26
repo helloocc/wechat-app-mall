@@ -1,10 +1,10 @@
 // index.ts
 // 获取应用实例
 
-import { copy } from "../../../utils/util";
-import { API_QRCODE_BOT, API_QRCODE_GROUP } from "../../../utils/api";
-import { QrCode_DEV } from "../../../utils/const";
-import { PAGE_LIVESHOW, PAGE_SITE_QRCODE } from "../../../utils/page";
+import { copy } from "../../../../utils/livestart/util";
+import { API_QRCODE_BOT, API_QRCODE_GROUP } from "../../../../utils/livestart/api";
+import { QrCode_DEV } from "../../../../utils/livestart/const";
+import { PAGE_LIVESHOW, PAGE_SITE_QRCODE } from "../../../../utils/livestart/page";
 
 
 Page({

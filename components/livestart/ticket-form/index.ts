@@ -2,8 +2,8 @@ import { APP, setCityId, convertShowViewData } from "../../../utils/livestart/gl
 import * as net from "../../../utils/livestart/net";
 import { userInfo } from "../../../utils/livestart/userInfo";
 import { PAGE_TICKETS_INFO } from "../../../utils/livestart/page";
-import moment, { now } from "moment";
 import { API_LIVESHOW, API_TICKET } from "../../../utils/livestart/api";
+import dayjs from 'dayjs';
 
 Component({
   properties: {
@@ -86,7 +86,7 @@ Component({
             (item: any) => item == ticket.status
           );
           const show_time = ticket.show_time * 1000;
-          const showTime = moment(show_time);
+          const showTime = dayjs(show_time);
           ticket.time = showTime.format("YYYY.MM.DD HH:mm");
           const form = {
             description: ticket.description,
