@@ -12,7 +12,7 @@
   <view wx:if="{{value.show_tel}}" class="contact">
     联系微信/手机：
     <text user-select="true" decode="true">{{value.contact_info}}</text>
-    <image data-contact_info="{{value.contact_info}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../icons/copy.svg"></image>
+    <image data-contact_info="{{value.contact_info}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../images/icon/livestart/copy.svg"></image>
   </view>
   <view class="footer">
     <view class="info">[{{value.nickname}}] 发布于 {{value.create_time}}</view>

@@ -12,7 +12,7 @@
             <text class="picker input">
               <text>{{cityList[cityIndex].name || '请选择'}}</text>
             </text>
-            <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+            <image class="arrow-right ml-sm time-icon" src="../../../images/icon/livestart/jing.svg" />
           </picker>
         </van-col>
       </van-row>
@@ -43,7 +43,7 @@
               <block wx:else>
                 <view class="input">{{form.showDate}}</view>
               </block>
-              <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+              <image class="arrow-right ml-sm time-icon" src="../../../images/icon/livestart/jing.svg" />
             </view>
           </picker>
         </van-col>
@@ -63,7 +63,7 @@
               <block wx:else>
                 <view class="input">{{form.showTime}}</view>
               </block>
-              <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+              <image class="arrow-right ml-sm time-icon" src="../../../images/icon/livestart/jing.svg" />
             </view>
           </picker>
         </van-col>
@@ -86,10 +86,10 @@
         <van-col span="6" class="form-label">出票数量</van-col>
         <van-col span="18" class="form-value">
           <view class="pr-sm">
-            <image class="number-icon" src="../../../icons/jian.svg" wx:if="{{form.count === 1}}"></image>
-            <image class="number-icon" src="../../../icons/minus.svg" wx:else bindtap="handleMinusNum"></image>
+            <image class="number-icon" src="../../../images/icon/livestart/jian.svg" wx:if="{{form.count === 1}}"></image>
+            <image class="number-icon" src="../../../images/icon/livestart/minus.svg" wx:else bindtap="handleMinusNum"></image>
             <text class="number-text">{{form.count}}</text>
-            <image class="number-icon" src="../../../icons/jia.svg" bindtap="handleAddNum"></image>
+            <image class="number-icon" src="../../../images/icon/livestart/jia.svg" bindtap="handleAddNum"></image>
           </view>
         </van-col>
       </van-row>
@@ -129,7 +129,7 @@
             <text class="picker input">
               <text>{{statusList[statusIndex] || '请选择'}}</text>
             </text>
-            <image class="arrow-right ml-sm time-icon" src="../../../icons/jing.svg" />
+            <image class="arrow-right ml-sm time-icon" src="../../../images/icon/livestart/jing.svg" />
           </picker>
         </van-col>
       </van-row>
@@ -145,8 +145,8 @@
         <text class="commit-text">{{commitText[0]}}</text>
       </view>
       <view class="commit-icon" data-index="0" bindtap="handleClickPromise">
-        <image wx:if="{{commitList[0]}}" src="../../../icons/xuanze2.svg"></image>
-        <image wx:else src="../../../icons/xuanze1.svg"></image>
+        <image wx:if="{{commitList[0]}}" src="../../../images/icon/livestart/xuanze2.svg"></image>
+        <image wx:else src="../../../images/icon/livestart/xuanze1.svg"></image>
       </view>
     </view>
     <view class="commit-box">
@@ -155,8 +155,8 @@
         <text class="commit-text">{{commitText[1]}}</text>
       </view>
       <view class="commit-icon" data-index="1" bindtap="handleClickPromise">
-        <image wx:if="{{commitList[1]}}" src="../../../icons/xuanze2.svg"></image>
-        <image wx:else src="../../../icons/xuanze1.svg"></image>
+        <image wx:if="{{commitList[1]}}" src="../../../images/icon/livestart/xuanze2.svg"></image>
+        <image wx:else src="../../../images/icon/livestart/xuanze1.svg"></image>
       </view>
     </view>
     <!-- <view class="commit-box commit-last">
@@ -166,8 +166,8 @@
           <text>{{commitText[2]}}</text>
         </van-col>
         <van-col span="6" class="commit-icon" data-index="2" bindtap="handleClickPromise">
-          <image wx:if="{{commitList[2]}}" src="../../../icons/xuanze2.svg"></image>
-          <image wx:else src="../../../icons/xuanze1.svg"></image>
+          <image wx:if="{{commitList[2]}}" src="../../../images/icon/livestart/xuanze2.svg"></image>
+          <image wx:else src="../../../images/icon/livestart/xuanze1.svg"></image>
         </van-col>
       </van-row>
     </view> -->

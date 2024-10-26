@@ -40,16 +40,6 @@ Page({
     });
   },
 
-  // 清空 input 事件
-  onClearSearch() {
-    this.setData({
-      search: "",
-      showData: [],
-      focusSearchInput: true,
-      searchHistory: (wx.getStorageSync(historyStoreKey) as []) || [],
-    });
-  },
-
   // 搜索
   doSearch(ctx, value: string) {
     if (value === "") {

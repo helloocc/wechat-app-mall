@@ -18,9 +18,9 @@
             <van-col span="20">{{ room_item.name }}</van-col>
             <van-col span="4" class="room-item-icon">
               <!-- 点击展开二维码 -->
-              <!-- <image wx:if="{{selectId === room_item.id}}" src="../../../icons/retract.svg"></image>
+              <!-- <image wx:if="{{selectId === room_item.id}}" src="../../../images/icon/livestart/retract.svg"></image>
               <image wx:else src="../../../icons/drop-down.svg"></image> -->
-              <image data-topic="{{room_item.name}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../icons/copy.svg"></image>
+              <image data-topic="{{room_item.name}}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../images/icon/livestart/copy.svg"></image>
             </van-col>
           </van-row>
         </view>
@@ -28,7 +28,7 @@
           <image class="img-qrcode" src="{{room_item.qrCode}}"></image>
           <view>
             {{ room_item.name }}
-            <image data-topic="{{ room_item.name }}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../icons/copy.svg"></image>
+            <image data-topic="{{ room_item.name }}" bindtap="handleClickCopy" class="img-clipbaoard" src="../../../images/icon/livestart/copy.svg"></image>
           </view>
         </view> -->
       </view>

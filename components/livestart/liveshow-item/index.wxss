@@ -1,6 +1,6 @@
 /* components/liveshow-item/index.wxss */
 
-@import "./font.wxss"
+@import "./font.wxss";
 
 .liveshow {
   color: #666;

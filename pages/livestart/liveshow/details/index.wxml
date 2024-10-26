@@ -6,22 +6,22 @@
       <image src="{{info.poster_thumbnail}}"></image>
     </view>
     <view wx:else="">
-      <image src="../../../images/noPic.jpg"></image>
+      <image src="../../../../images/livestart/noPic.jpg"></image>
     </view>
   </view>
   <view class="detail-box" style="{{info.performers.length>60 ?'margin-top:-52rpx':'margin-top:0rpx'}}">
     <view class="detail-title">{{info.title}}</view>
     <view class="detail-performers">{{info.performers}}</view>
     <view class="detail-day">
-      <image src="../../../icons/time2.svg"></image>{{info.dayTime}}
+      <image src="../../../../images/icon/livestart/time2.svg"></image>{{info.dayTime}}
     </view>
     <view class="detail-site">
       <view wx:if="{{info.site_visible}}">
-        <image src="../../../icons/dizhi2.svg"></image>
+        <image src="../../../../images/icon/livestart/dizhi2.svg"></image>
         <text bindtap="goToSiteDetails">{{info.city}}-{{info.site}}</text>
       </view>
       <view wx:else="">
-        <image src="../../../icons/dizhi2.svg"></image>
+        <image src="../../../../images/icon/livestart/dizhi2.svg"></image>
         {{info.city}}-{{info.site}}
       </view>
     </view>
@@ -36,7 +36,7 @@
         <van-col span="23">{{info.url}} </van-col>
         <van-col span="1">
           <view class="ta-right">
-            <image src="../../../icons/copy.svg" data-topic="{{info.url}}" bindtap="handleClickCopyUrl" class="img-clipboard"></image>
+            <image src="../../../../images/icon/livestart/copy.svg" data-topic="{{info.url}}" bindtap="handleClickCopyUrl" class="img-clipboard"></image>
           </view>
         </van-col>
       </view>
@@ -60,16 +60,14 @@
   <view class="info-title">相关群聊</view>
   <view class="info-content">
     <view class="qrcode-box">
-      <!-- <image src="../../../icons/jump.svg" class="img-icon"></image> -->
       <image src="{{botQrCode}}" class="img-qrcode" mode="aspectFit" show-menu-by-longpress="true"></image>
-      <!-- <image src="../../../icons/jump.svg" class="img-icon"></image> -->
     </view>
     <van-row>
       <view wx:if="{{info.related_rooms}}">
         <van-col span="23" class="qrcode-text">添加好友后，发送：#加群 {{info.related_rooms}} </van-col>
         <van-col span="1">
           <view class="ta-right">
-            <image src="../../../icons/copy.svg" data-topic="{{info.related_rooms}}" bindtap="handleClickCopyRoomName" class="img-clipboard"></image>
+            <image src="../../../../images/icon/livestart/copy.svg" data-topic="{{info.related_rooms}}" bindtap="handleClickCopyRoomName" class="img-clipboard"></image>
           </view>
         </van-col>
       </view>
@@ -86,7 +84,7 @@
   <view class="footer-box">
     <view bindtap="handleClickLike">
       <image wx:if="{{info.is_favor}}" src="../../../icons/like-fill.svg" class="icon-like"></image>
-      <image wx:else src="../../../icons/like.svg" class="icon-like"></image>
+      <image wx:else src="../../../images/icon/livestart/like.svg" class="icon-like"></image>
     </view>
     <button open-type="share">演出分享</button>
   </view>

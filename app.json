@@ -133,7 +133,8 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black",
-    "onReachBottomDistance": 50
+    "onReachBottomDistance": 50,
+    "enableInPageRenderInput": "YES"
   },
   "tabBar": {
     "color": "#707070",
@@ -143,8 +144,8 @@
     "list": [
       {
         "pagePath": "pages/livestart/liveshow/monthShow/index",
-        "iconPath": "icons/yanchu_sm.png",
-        "selectedIconPath": "icons/yanchu_selected_sm.png",
+        "iconPath": "images/icon/livestart/yanchu_sm.png",
+        "selectedIconPath": "images/icon/livestart/yanchu_selected_sm.png",
         "text": "演出"
       },
       {
@@ -155,14 +156,14 @@
       },
       {
         "pagePath": "pages/livestart/tickets/info/index",
-        "iconPath": "icons/chupiao_sm.png",
-        "selectedIconPath": "icons/chupiao_selected_sm.png",
+        "iconPath": "images/icon/livestart/chupiao_sm.png",
+        "selectedIconPath": "images/icon/livestart/chupiao_selected_sm.png",
         "text": "出票"
       },
       {
         "pagePath": "pages/livestart/my/my",
-        "iconPath": "icons/wode_sm.png",
-        "selectedIconPath": "icons/wode_selected_sm.png",
+        "iconPath": "images/icon/livestart/wode_sm.png",
+        "selectedIconPath": "images/icon/livestart/wode_selected_sm.png",
         "text": "我的"
       },
       {

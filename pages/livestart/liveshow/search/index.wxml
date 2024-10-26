@@ -3,14 +3,14 @@
     <!--
       <l-search-bar l-container-class="searchbar" l-class="searchbar-input" focus="{{focusSearchInput}}" bind:linchange="handleSearch" bind:linconfirm="handleSearch" bind:bind:linclear="onClearSearch" bind:lincancel="onCancelSearch" bg-color="#fff" shape="circle" placeholder="搜索乐队/演出名称/场地" show-cancel="{{true}}" value="{{search}}" />
     -->
-    <ant-input placeholder="  搜索乐队/演出名称/场地" bind:change="onSearchInputChange" className="searchbar" confirmType="search" placeholder-class="searchbar-input-placeholder" value="{{search}}">
+    <ant-input placeholder="  搜索乐队/演出名称/场地" bind:change="onSearchInputChange" bind:confirm="onSearchInputChange" className="searchbar" confirmType="search" placeholder-class="searchbar-input-placeholder" value="{{search}}" focus allowClear>
       <ant-icon slot="prefix" type="SearchOutline"></ant-icon>
     </ant-input>
     <view class="cancel" bind:tap="onCancelSearch">取消</view>
   </view>
   <view class="result-container">
     <view wx:if="{{search === ''}}" class="history">
-      <view id="history-title">
+      <view class="history-title">
         搜索历史:
       </view>
       <view wx:for="{{searchHistory}}" wx:key="*this" wx:for-index="index" wx:for-item="history">
@@ -19,7 +19,7 @@
             <ant-icon type="SearchOutline"></ant-icon>
             <text>{{history}}</text>
           </view>
-          <ant-icon type="CloseOutline" data-index="{{index}}" bind:tap="onRemoveHistory" ></ant-icon>
+          <ant-icon type="CloseOutline" data-index="{{index}}" bind:tap="onRemoveHistory"></ant-icon>
         </view>
       </view>
     </view>

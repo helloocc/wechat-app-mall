@@ -97,7 +97,7 @@ Page({
   // 打开出票列表
   handleClickTicket() {
     // this.data.info.performers
-    const url = '/pages/liveshow/tickets/ticketsInfo?performers=' + this.data.info.performers
+    const url = '/pages/livestart/liveshow/tickets/ticketsInfo?performers=' + this.data.info.performers
     wx.navigateTo({ url: url })
     // wx.switchTab({ url: url })
   },

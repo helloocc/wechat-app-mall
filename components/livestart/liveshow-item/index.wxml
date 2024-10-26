@@ -43,7 +43,7 @@
         <button class="ticket-btn" data-id="{{id}}" bindtap="handleClickTicket">出票</button>
       </view>
       <view wx:if="{{isDetail}}">
-        <image src="../../../icons/jump.svg" ></image>
+        <image src="../../../images/icon/livestart/jump.svg" ></image>
       </view>
     </view>
   </view>

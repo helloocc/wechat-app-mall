@@ -1,6 +1,6 @@
 <view id="page">
   <noticebar wx:if="{{showNotice}}" closable="{{false}}" bindclose="onCloseNotice">
-    <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../../icons/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
+    <view class="notice-content">提示：右下角<image class="join-group-button-img-notice" src="../../../../images/icon/livestart/jiaqun.svg"></image>按钮添加小助手，复制群名并发送给小助手即可进群</view>
   </noticebar>
   <view class="search-container search-container-sticky">
     <select-city bind:select="handleSelectCity" save></select-city>
@@ -34,7 +34,7 @@
 
   <movable-area class="join-group">
     <movable-view class="join-group-button" direction="vertical" bindtap='goQrCode'>
-      <image class="join-group-button-img" src="../../../../icons/jiaqun.svg"></image>
+      <image class="join-group-button-img" src="../../../../images/icon/livestart/jiaqun.svg"></image>
     </movable-view>
   </movable-area>
 </view>

@@ -2,10 +2,10 @@
 <view class="Add_Sub">
   <view class='Goods_Num'><text>{{Goods_Num}}</text></view>
   <view class="subtractor" bindtap='minusNum'>
-    <image class="Add_Sub_logo" src="../../../icons/jian.svg"></image><!--这里我使用的图片是为了适配不同的机型，文章最后会提供素材下载地址-->
+    <image class="Add_Sub_logo" src="../../../images/icon/livestart/jian.svg"></image><!--这里我使用的图片是为了适配不同的机型，文章最后会提供素材下载地址-->
   </view>
   <view class="adder" bindtap='addNum'>
-    <image class="Add_Sub_logo" src="../../../icons/jia.svg"></image><!--这里我使用的图片是为了适配不同的机型，文章最后会提供素材下载地址-->
+    <image class="Add_Sub_logo" src="../../../images/icon/livestart/jia.svg"></image><!--这里我使用的图片是为了适配不同的机型，文章最后会提供素材下载地址-->
   </view>
 </view>
 </template>

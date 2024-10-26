@@ -6,7 +6,7 @@
         <select-city bind:select="handleSelectCity" save type="white"></select-city>
       </view>
       <view class="qrcode-bg">
-        <image src="../../../icons/bg.svg"></image>
+        <image src="../../../images/icon/livestart/bg.svg"></image>
       </view>
       <view class="qrcode-container">
         <view class="qrcode">

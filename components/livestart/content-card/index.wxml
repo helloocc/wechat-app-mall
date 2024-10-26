@@ -3,7 +3,7 @@
     <view class="card-top-left">
       <!-- <view class="card-dot"></view> -->
       <!-- <view class="content-name"> -->
-   <!-- <image class="biaoqian" src="../../../icons/biaoqian.svg"></image>  -->
+   <!-- <image class="biaoqian" src="../../../images/icon/livestart/biaoqian.svg"></image>  -->
       <!-- {{name}}
       </view> -->
     </view>

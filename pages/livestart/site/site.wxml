@@ -11,7 +11,7 @@
     <view class="detail-box" style="{{siteInfo.room_key ?'margin-top:0px':'margin-top:20px'}}">
       <view class="detail-title">{{siteInfo.city}}-{{siteInfo.owner}}</view>
       <view class="detail-site">
-        <image src="../../../icons/dizhi2.svg"></image>{{siteInfo.location || "暂无"}}
+        <image src="../../../images/icon/livestart/dizhi2.svg"></image>{{siteInfo.location || "暂无"}}
       </view>
       <view wx:if="{{siteInfo.room_key}}">
         <button class="join-room" bindtap='goSiteQrCode'>加入场地群</button>

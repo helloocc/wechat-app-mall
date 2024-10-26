@@ -21,9 +21,9 @@ Page({
       my_ticket: true,
     });
     const status_map = {
-      出票中: "/icons/chupiaozhong.svg",
-      已出票: "/icons/yichupiao.svg",
-      已关闭: "/icons/yiguanbi.svg",
+      出票中: "/images/icon/livestart/chupiaozhong.svg",
+      已出票: "/images/icon/livestart/yichupiao.svg",
+      已关闭: "/images/icon/livestart/yiguanbi.svg",
     };
     for (let item of resp.data) {
       let show_time = item.show_time * 1000;

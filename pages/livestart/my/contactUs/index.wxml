@@ -3,7 +3,7 @@
   <view class="contactInfo">
     <view class="green">
       <view class="qrcode-bg">
-        <image src="../../../icons/bg.svg"></image>
+        <image src="../../../images/icon/livestart/bg.svg"></image>
       </view>
       <view class="qrcode-container">
         <view class="qrcode">

@@ -17,16 +17,16 @@
            
         <!-- </view> --> 
         <view class="size25 iconRight">
-          <!-- <image class="comentsIcon" src="../../../icons/gengduo.svg" /> -->
+          <!-- <image class="comentsIcon" src="../../../images/icon/livestart/gengduo.svg" /> -->
         
-        <image style="float:right;margin:0 10rpx 0 40rpx;" bindtap="showMenuList" class="moreIcon" src="../../../icons/gengduo.svg" />
+        <image style="float:right;margin:0 10rpx 0 40rpx;" bindtap="showMenuList" class="moreIcon" src="../../../images/icon/livestart/gengduo.svg" />
        
        
         </view> 
         </view>
         <!-- <view class="containerTxt">
           <view class="imgStatusContainer">
-          <image class="imgStatus" src="../../../icons/chupiaozhong.svg" />
+          <image class="imgStatus" src="../../../images/icon/livestart/chupiaozhong.svg" />
           <text>出票中</text>
           </view>
           <view class="container">
@@ -37,7 +37,7 @@
         </view> -->
         <view class="borderBottom detailContainer">
         <view class="containerBlock">
-          <view class="imgStatusContainer"><image class="imgStatus" src="../../../icons/chupiaozhong.svg" />
+          <view class="imgStatusContainer"><image class="imgStatus" src="../../../images/icon/livestart/chupiaozhong.svg" />
           <text>出票中</text>
           </view>
           <view class="show-title show-title-detail">{{show.performers}}</view>

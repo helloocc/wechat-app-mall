@@ -12,15 +12,15 @@ import dayjs from 'dayjs';
 const statusList = [
   {
     cn: "出票中",
-    icon: "/icons/chupiaozhong.svg",
+    icon: "/images/icon/livestart/chupiaozhong.svg",
   },
   {
     cn: "已出票",
-    icon: "/icons/yichupiao.svg",
+    icon: "/images/icon/livestart/yichupiao.svg",
   },
   {
     cn: "已关闭",
-    icon: "/icons/yiguanbi.svg",
+    icon: "/images/icon/livestart/yiguanbi.svg",
   },
 ];
 

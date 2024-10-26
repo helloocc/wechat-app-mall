@@ -3,8 +3,8 @@
     <van-row gutter="20">
       <van-col span="8" class="form-label">我的头像</van-col>
       <van-col span="16" class="form-value">
-        <image src="../../../icons/unlogin.svg" class="user-avatar"></image>
-        <image src="../../../icons/jing.svg" class="triangle-icon"></image>
+        <image src="../../../images/icon/livestart/unlogin.svg" class="user-avatar"></image>
+        <image src="../../../images/icon/livestart/jing.svg" class="triangle-icon"></image>
       </van-col>
     </van-row>
   </view>
@@ -13,7 +13,7 @@
       <van-col span="8" class="form-label">我的昵称</van-col>
       <van-col span="16" class="form-value" bindtap="handleNameShow">
         {{userInfo.nickname || "未设置"}}
-        <image src="../../../icons/jing.svg" class="triangle-icon"></image>
+        <image src="../../../images/icon/livestart/jing.svg" class="triangle-icon"></image>
       </van-col>
     </van-row>
   </view>
@@ -28,7 +28,7 @@
       <van-col span="16" class="form-label">微信号(出票默认填写)</van-col>
       <van-col span="8" class="form-value" bindtap="handleWechatShow">
         {{userInfo.wechat|| "未设置"}}
-        <image src="../../../icons/jing.svg" class="triangle-icon"></image>
+        <image src="../../../images/icon/livestart/jing.svg" class="triangle-icon"></image>
       </van-col>
     </van-row>
   </view>

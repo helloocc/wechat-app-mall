@@ -27,8 +27,7 @@
   color: #aaa;
 }
 
-
-#history-title {
+.history-title {
   color: #aaa;
   font-size: 24rpx;
   margin-top: 24rpx;
@@ -42,13 +41,6 @@
   font-size: 24rpx;
   line-height: 78rpx;
   color: #aaa;
-}
-
-.history-item .l-icon {
-  font-size: 22rpx !important;
-  color: #aaa !important;
-  padding-right: 16rpx;
-  align-items: center !important;
 }
 
 .history-item .content {
