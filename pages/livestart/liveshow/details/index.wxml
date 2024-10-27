@@ -83,8 +83,8 @@
 <view class="footer">
   <view class="footer-box">
     <view bindtap="handleClickLike">
-      <image wx:if="{{info.is_favor}}" src="../../../icons/like-fill.svg" class="icon-like"></image>
-      <image wx:else src="../../../images/icon/livestart/like.svg" class="icon-like"></image>
+      <image wx:if="{{info.is_favor}}" src="../../../../images/icon/livestart/like-fill.svg" class="icon-like"></image>
+      <image wx:else src="../../../../images/icon/livestart/like.svg" class="icon-like"></image>
     </view>
     <button open-type="share">演出分享</button>
   </view>

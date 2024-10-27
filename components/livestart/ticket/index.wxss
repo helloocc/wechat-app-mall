@@ -4,7 +4,6 @@
 }
 
 .meta {
-  font-size: 26rpx;
   margin-bottom: 24rpx;
 }
 
@@ -31,11 +30,12 @@
   color: #E9F4EF;
   padding: 1rpx 12rpx;
   font-size: 28rpx;
-  /* font-family: DINPro, HelveticaNeue, Helvetica, Arial, sans-serif; */
+  font-family: DINPro, HelveticaNeue, Helvetica, Arial, sans-serif; 
 }
 
 .showTime{
   border: 1px solid #ccc;
+  border-left: none;
   color: #666;
   padding: 1rpx 12rpx 1rpx 4rpx;
   font-size: 28rpx;

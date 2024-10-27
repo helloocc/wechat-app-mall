@@ -1,4 +1,5 @@
 import { PAGE_LOGIN } from "./page";
+import dayjs from 'dayjs';
 
 const USER_INFO = "USER_INFO";
 const USER_CITY_ID = "USER_CITY_ID";
@@ -45,17 +46,17 @@ class UserInfo {
     return wx.getStorageSync(USER_CITY_ID)
   }
   checkStorageOutDated(): boolean {
-    var storedDate = wx.getStorageSync(CITY_STORE_DATE);
-    var currentDate = new Date().getTime();
+    var storedDateValue = wx.getStorageSync(CITY_STORE_DATE);
+    const currentDate = dayjs();
     wx.setStorageSync(CITY_STORE_DATE, currentDate);
     let outdated = false
-    if (storedDate === "") {
+    if (storedDateValue === "") {
       outdated = false
     } else {
-      storedDate = new Date(Number(storedDate));
+      const storedDate = dayjs.unix(Number(storedDateValue))
       // 计算两个日期之间的差值，结果是毫秒数
-      var timeGap = currentDate - storedDate;
-      const threshold = 1000 * 60 * 60 * 24 * 2
+      var timeGap = currentDate.unix() - storedDate.unix();
+      const threshold = 60 * 60 * 24 * 2
       if (timeGap > threshold) {
         outdated = true
       }

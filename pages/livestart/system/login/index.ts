@@ -18,9 +18,11 @@ Page({
   onLoad() {
     this.updateWXLoginCode()
   },
-  onClicklogin(e: any) {
+
+  onClickLogin(e: any) {
+    console.log("onClickLogin:", e)
     if (!e.detail.encryptedData) return
-    console.log('onClicklogin', e.detail.code, this.data.code)
+    // console.log('onClicklogin', e.detail.code, this.data.code)
     net.get(API_LOGIN, { code: this.data.code }, loginRes => {
       if (loginRes.code === 200) {
         net.post(API_PHONE, {
@@ -55,68 +57,26 @@ Page({
       isCheck: e.detail.value.length == 1
     })
   },
+
   updateWXLoginCode() {
     let that = this
     wx.login({
       success(res) {
+        console.log('login successfuly,', res)
         if (res.code) {
-          console.log('wx-code', res.code)
           that.setData({
             code: res.code
           })
         }
-      }
+      },
+      fail(res) {
+        console.warn("Failed to login wx,", res);
+      },
     })
   },
+
   endingLogin() {
     wx.navigateBack()
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

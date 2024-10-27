@@ -1,8 +1,11 @@
 <view class="container">
-  <view class="search-container-wrapper">
-    <view class="search-container">
-      <l-search-bar l-class="searchbar" l-input-class="searchbar-input" l-container-class="searchbar-container" bg-color="  " shape="circle" placeholder="搜索城市/乐队/演出名称" bind:linchange="handleSearch" bind:linconfirm="handleSearch" bind:lincancel="onCancel" bind:linclear="onCancel" show-cancel="{{false}}" />
-    </view>
+  <view class="search-container search-container-sticky">
+    <!--
+      <l-search-bar l-container-class="searchbar" l-class="searchbar-input" focus="{{focusSearchInput}}" bind:linchange="handleSearch" bind:linconfirm="handleSearch" bind:bind:linclear="onClearSearch" bind:lincancel="onCancelSearch" bg-color="#fff" shape="circle" placeholder="搜索乐队/演出名称/场地" show-cancel="{{true}}" value="{{search}}" />
+    -->
+    <ant-input placeholder="  搜索乐队/演出名称/场地" bind:change="onSearchInputChange" bind:confirm="onSearchInputChange" className="searchbar" confirmType="search" placeholder-class="searchbar-input-placeholder" value="{{search}}" allowClear>
+      <ant-icon slot="prefix" type="SearchOutline"></ant-icon>
+    </ant-input>
   </view>
 
   <view class="content-container">

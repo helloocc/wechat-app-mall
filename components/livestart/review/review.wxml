@@ -1,4 +1,4 @@
-<import src="../../components/talk-body/talk-body.wxml"/>
+<import src="../talk-body/talk-body.wxml"/>
 <template name="review">
 
 <!-- 整个评论区 -->

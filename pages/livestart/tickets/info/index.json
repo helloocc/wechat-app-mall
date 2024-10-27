@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "noticebar": "/components/livestart/noticebar/index",
-    "ticket": "/components/livestart/ticket/index"
+    "ticket": "/components/livestart/ticket/index",
+    "ant-input": "antd-mini/Input/index",
+    "ant-icon": "antd-mini/Icon/index"
   }
 }

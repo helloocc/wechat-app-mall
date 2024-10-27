@@ -7,7 +7,7 @@ import {
   PAGE_TICKETS_LIVESHOW,
 } from "../../../../utils/livestart/page";
 import { getData } from "../../../../utils/livestart/request";
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 const statusList = [
   {
@@ -35,14 +35,14 @@ Page({
   },
 
   onShow() {
-    this.onSearch(this.data.keyword, this.data.page);
+    this.doSearch(this.data.keyword, this.data.page);
   },
 
   onCancel() {
     wx.showToast({
       title: "取消搜索",
     });
-    this.onSearch();
+    this.doSearch();
   },
 
   gotoTicketPublish() {
@@ -69,23 +69,27 @@ Page({
     });
   },
 
-  handleSearch(e: any) {
-    debounce(this.onSearch)(e.detail.value);
+  onSearchInputChange(e: any) {
+    debounce((ctx, value) => {
+      ctx.doSearch(value);
+    })(this, e.detail);
   },
 
-  async onSearch(keyword: string = "", page: number = 1) {
+  async doSearch(keyword: string = "", page: number = 1) {
     console.log(`Ticket search keyword: [${keyword}], load page: ${page}`);
     if (page == 1) {
       wx.pageScrollTo({
         scrollTop: 0,
       });
     }
+    wx.showLoading({title: "加载中..."})
     const resp = await getData(API_TICKET, {
       keyword: keyword,
       page: page,
       size: this.data.pageSize,
       user_id: userInfo.getUserInfo().user_id,
     });
+    wx.hideLoading()
     console.log(resp.data);
 
     for (let item of resp.data.items) {
@@ -117,14 +121,14 @@ Page({
 
   scrollToLower() {
     if (this.data.page < this.data.maxPage) {
-      this.onSearch(this.data.keyword, this.data.page + 1);
+      this.doSearch(this.data.keyword, this.data.page + 1);
     }
   },
 
   onReachBottom() {
     console.log(`Ticket reach bottom, current page: ${this.data.page}`);
     if (this.data.page < this.data.maxPage) {
-      this.onSearch(this.data.keyword, this.data.page + 1);
+      this.doSearch(this.data.keyword, this.data.page + 1);
     }
   },
 
@@ -132,13 +136,14 @@ Page({
   onUnload() {},
 
   onPullDownRefresh() {
-    this.onSearch(this.data.keyword);
+    this.doSearch(this.data.keyword);
     wx.stopPullDownRefresh();
   },
 
   onShareAppMessage() {
     return {
       title: "LiveStart出票",
+      desc: "LiveStart出票",
       path: PAGE_TICKETS_INFO,
     };
   },
@@ -146,6 +151,7 @@ Page({
   onShareTimeline() {
     return {
       title: "LiveStart出票",
+      desc: "LiveStart出票",
       path: PAGE_TICKETS_INFO,
     };
   },

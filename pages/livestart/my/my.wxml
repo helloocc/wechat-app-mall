@@ -23,12 +23,6 @@
     <image src="../../../images/icon/livestart/chupiao.svg"></image>
     <text class="text">我的出票</text>
   </view>
-  <!-- 
-  <view class="mySpace">
-    <image src="../../../images/icon/livestart/pinglun_wode1.svg"></image>
-    <text class="text">评论及回复</text>
-  </view>
-  -->
 </view>
 <view class="cell" bindtap="gotoContactUs">
   <view class="flex-center">

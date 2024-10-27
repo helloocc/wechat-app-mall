@@ -1,7 +1,7 @@
 <view class="login-box">
-  <view class="logo-box"><image src="../../../images/logo.png"></image></view>
+  <view class="logo-box"><image src="../../../../images/livestart/logo.png"></image></view>
   <view class="btn-box">
-    <button wx:if="{{isCheck}}" class="login-btn" open-type="getPhoneNumber" bindgetphonenumber="onClicklogin">授权手机号快速登录</button>
+    <button wx:if="{{isCheck}}" class="login-btn" open-type="getPhoneNumber" bindgetphonenumber="onClickLogin">授权手机号快速登录</button>
     <button wx:else class="login-btn btn-disable">授权手机号快速登录</button>
     <view class="text-box">
       <checkbox-group class="chk-agree" bindchange="checkboxChange">
