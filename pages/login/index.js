@@ -61,7 +61,7 @@ Page({
     if (res.code == 10000) {
       // 用户不存在
       wx.showModal({
-        content: '您还未注册，请使用《手机号安全登陆》方式登陆',
+        content: '您还未注册，请授权手机号登录',
         showCancel: false
       })
       return
